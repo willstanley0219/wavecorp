@@ -1,0 +1,2876 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- claude寶貝 Title加入完整關鍵字「店面預約系統」符合RankMath規範 2026-06-19 -->
+<title>崴富國際｜台灣中小企業雲端管理系統｜POS收銀・店面預約系統・分店管理</title>
+<!-- claude寶貝 Meta description首句含「店面預約系統」符合RankMath規範 2026-06-19 -->
+<meta name="description" content="崴富國際提供店面預約系統（NT$200/月起）、POS收銀、分店管理等雲端工具，專為台灣中小企業設計。桃園在地服務，旗下 CPshirt 職業服飾，企業制服採購首選。">
+<meta name="keywords" content="台灣管理系統,中小企業,EC SUPPLY採購工具,三聯式發票計算機,店面預約系統,分店管理,租房管理,電子報系統,職業服飾,CPshirt,白襯衫,企業制服,桃園,崴富國際">
+<link rel="canonical" href="https://wavecorp1.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a1a2e'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23c9a96e' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0d0d0d;
+  --paper: #f7f5f0;
+  --gold: #c9a96e;
+  --gold-light: #e8d5aa;
+  --navy: #1a1a2e;
+  --navy-mid: #16213e;
+  --navy-deep: #0f3460;
+  --steel: #4a5568;
+  --mist: #e8e4dc;
+  --white: #ffffff;
+  --accent: #e63946;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: #1a1a1a;
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ─── NOISE TEXTURE ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  padding: 0 40px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(247, 245, 240, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(201,169,110,0.2);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.nav-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.nav-logo-wave {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--navy);
+  letter-spacing: 2px;
+}
+.nav-logo-wave span { color: var(--gold); }
+.nav-logo-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--steel);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--steel);
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.nav-links a:hover { color: var(--navy); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-cta {
+  background: var(--navy);
+  color: var(--gold) !important;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s !important;
+}
+.nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; transform: translateY(-1px); }
+.nav-cta::after { display: none !important; }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+.hero-left {
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 60px 80px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-left::before {
+  content: '';
+  position: absolute;
+  bottom: -120px; left: -120px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.15) 0%, transparent 70%);
+}
+.hero-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s forwards;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.4s forwards;
+}
+.hero-title em {
+  font-style: normal;
+  color: var(--gold);
+  display: block;
+}
+.hero-desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.6);
+  max-width: 380px;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.6s forwards;
+}
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.8s forwards;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,169,110,0.3); }
+.btn-ghost {
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--white); }
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  opacity: 0;
+  animation: fadeUp 0.8s 1.0s forwards;
+}
+.stat-item .stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.stat-item .stat-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.hero-right {
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 60px 80px 40px;
+  position: relative;
+}
+.hero-right::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+}
+.systems-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  width: 100%;
+  max-width: 440px;
+}
+.sys-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px 20px;
+  border: 1px solid var(--mist);
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeUp 0.6s forwards;
+  text-decoration: none;
+}
+.sys-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.sys-card:hover {
+  border-color: var(--gold-light);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+.sys-card:hover::before { transform: scaleX(1); }
+.sys-card:nth-child(1) { animation-delay: 0.5s; }
+.sys-card:nth-child(2) { animation-delay: 0.65s; }
+.sys-card:nth-child(3) { animation-delay: 0.8s; }
+.sys-card:nth-child(4) { animation-delay: 0.95s; }
+.sys-card:nth-child(5) { animation-delay: 1.1s; }
+.sys-card:nth-child(6) { animation-delay: 1.25s; }
+
+.sys-card.featured {
+  background: var(--navy);
+  border-color: var(--navy);
+  grid-column: span 2;
+}
+.sys-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 14px;
+  background: var(--paper);
+}
+.sys-card.featured .sys-icon {
+  background: rgba(201,169,110,0.15);
+}
+.sys-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+}
+.sys-card.featured .sys-name { color: var(--gold); font-size: 15px; }
+.sys-brief {
+  font-size: 11px;
+  color: var(--steel);
+  line-height: 1.6;
+}
+.sys-card.featured .sys-brief { color: rgba(255,255,255,0.55); }
+.sys-badge {
+  position: absolute;
+  top: 14px; right: 14px;
+  font-size: 9px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.badge-live { background: #d4edda; color: #155724; }
+.badge-soon { background: rgba(201,169,110,0.15); color: var(--gold); border: 1px solid rgba(201,169,110,0.3); }
+
+/* ─── ABOUT ─── */
+.section-about-wrap {
+  background: #f6f4ef;
+}
+.section-about {
+  padding: 120px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+.about-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.about-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+.about-heading span { color: var(--gold); }
+.about-body {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--steel);
+  margin-bottom: 32px;
+}
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.info-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: var(--steel);
+}
+.info-row strong {
+  min-width: 80px;
+  color: var(--navy);
+  font-weight: 600;
+}
+.about-visual {
+  position: relative;
+}
+.about-card-main {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 40px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.about-card-main::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.2) 0%, transparent 70%);
+}
+.about-card-stat {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.about-card-label { font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 8px; }
+.about-card-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 28px 0; }
+.about-products {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.product-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(201,169,110,0.12);
+  border: 1px solid rgba(201,169,110,0.25);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+}
+.product-tag span { font-size: 14px; }
+
+/* ─── SYSTEMS SECTION ─── */
+.section-systems {
+  padding: 120px 80px;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.section-systems::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%);
+}
+.sys-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.sys-header .about-label { text-align: center; }
+.sys-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+}
+.sys-header h2 em { font-style: normal; color: var(--gold); }
+.sys-header p {
+  margin-top: 16px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.45);
+  max-width: 500px;
+  margin-left: auto; margin-right: auto;
+}
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.system-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 36px 30px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.system-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  border: 1px solid var(--gold);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.system-card:hover {
+  background: rgba(255,255,255,0.07);
+  transform: translateY(-6px);
+}
+.system-card:hover::after { opacity: 0.5; }
+.sys-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: rgba(201,169,110,0.5);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.sys-big-icon {
+  font-size: 36px;
+  margin-bottom: 18px;
+  display: block;
+}
+.sys-card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.sys-card-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+.sys-features {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.sys-feat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}
+.sys-feat::before {
+  content: '›';
+  color: var(--gold);
+  font-size: 14px;
+  line-height: 1;
+}
+.sys-status {
+  position: absolute;
+  top: 20px; right: 20px;
+  font-size: 9px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.status-live { background: rgba(39,174,96,0.15); color: #27ae60; border: 1px solid rgba(39,174,96,0.3); }
+.status-soon { background: rgba(201,169,110,0.1); color: var(--gold); border: 1px solid rgba(201,169,110,0.3); }
+
+/* ─── BRANDS ─── */
+.section-brands {
+  padding: 100px 80px;
+  background: var(--paper);
+}
+.brands-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.brands-header .about-label { text-align: center; }
+.brands-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.brands-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.brand-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 36px;
+  border: 1px solid var(--mist);
+  transition: all 0.3s;
+  text-decoration: none;
+  display: block;
+}
+.brand-card:hover {
+  border-color: var(--gold-light);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.07);
+}
+.brand-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--navy);
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.brand-logo span { color: var(--gold); }
+.brand-domain {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.brand-desc {
+  font-size: 13px;
+  color: var(--steel);
+  line-height: 1.7;
+}
+.brand-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.btag {
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--paper);
+  color: var(--steel);
+  letter-spacing: 0.5px;
+}
+
+/* ─── CONTACT ─── */
+.section-contact {
+  padding: 120px 80px;
+  background: linear-gradient(135deg, var(--navy) 0%, #0a1628 100%);
+  position: relative;
+  overflow: hidden;
+}
+.section-contact::before {
+  content: '';
+  position: absolute;
+  bottom: -200px; left: -200px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+}
+.contact-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.contact-left .about-label { margin-bottom: 16px; }
+.contact-left h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.contact-left h2 em { font-style: normal; color: var(--gold); }
+.contact-left p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.9;
+}
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.contact-item:hover { border-color: rgba(201,169,110,0.3); background: rgba(255,255,255,0.07); }
+.contact-icon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.contact-icon.line { background: rgba(0,185,0,0.15); }
+.contact-icon.tel { background: rgba(201,169,110,0.15); }
+.contact-icon.addr { background: rgba(30,80,255,0.1); }
+.contact-text strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.contact-text span {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.6;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--ink);
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--white);
+}
+.footer-logo span { color: var(--gold); }
+.footer-corp {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+.footer-copy {
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.5px;
+  text-align: right;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  background: var(--navy);
+  color: var(--gold);
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  transition: all 0.2s;
+  z-index: 998;
+}
+.back-to-top:hover { background: var(--gold); color: var(--navy); transform: translateY(-2px); }
+@media(max-width:768px) { .back-to-top { bottom: 20px; right: 20px; } }
+
+/* ─── DIVIDER ─── */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  max-width: 200px;
+  margin: 20px auto 0;
+  opacity: 0.4;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── SCROLLED NAV ─── */
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+/* ─── BLOG SECTION ─── */
+.section-blog {
+  padding: 100px 80px;
+  background: var(--paper);
+}
+.blog-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.blog-header .about-label { text-align: center; }
+.blog-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.blog-card {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--mist);
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+.blog-card:hover {
+  border-color: var(--gold-light);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.07);
+}
+.blog-card-img {
+  width: 100%; height: 180px;
+  object-fit: cover;
+  display: block;
+  background: var(--mist);
+}
+.blog-card-img-placeholder {
+  width: 100%; height: 180px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+.blog-card-body { padding: 20px 22px 22px; }
+.blog-card-meta {
+  font-size: 11px;
+  color: var(--gold);
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.blog-card-cat {
+  background: rgba(201,169,110,0.12);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  color: var(--gold);
+  border: 1px solid rgba(201,169,110,0.25);
+}
+.blog-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.blog-card-excerpt {
+  font-size: 13px;
+  color: var(--steel);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.blog-card-readmore {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.blog-more-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background: var(--navy);
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.blog-more-btn:hover { background: var(--gold); color: var(--navy); transform: translateY(-2px); }
+.blog-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px;
+  color: var(--steel);
+  font-size: 14px;
+}
+.blog-empty-icon { font-size: 48px; display: block; margin-bottom: 16px; }
+
+/* ─── SINGLE POST PAGE ─── */
+#post-page {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--paper);
+  z-index: 9000;
+  overflow-y: auto;
+}
+.post-page-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 80px 40px 120px;
+}
+.post-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 40px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+.post-back-btn:hover { opacity: 0.7; }
+.post-meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.post-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+.post-divider {
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  margin-bottom: 40px;
+  opacity: 0.4;
+}
+.post-content {
+  font-size: 16px;
+  color: #2d2d2d;
+  line-height: 1.9;
+}
+.post-content h1,.post-content h2,.post-content h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy);
+  margin: 32px 0 14px;
+  line-height: 1.3;
+}
+.post-content h1 { font-size: 32px; }
+.post-content h2 { font-size: 26px; }
+.post-content h3 { font-size: 20px; }
+.post-content p { margin-bottom: 20px; }
+.post-content img { max-width: 100%; border-radius: 10px; margin: 20px 0; }
+.post-content a { color: var(--gold); }
+.post-content blockquote {
+  border-left: 3px solid var(--gold);
+  padding: 12px 20px;
+  background: rgba(201,169,110,0.06);
+  border-radius: 0 8px 8px 0;
+  margin: 24px 0;
+  font-style: italic;
+  color: var(--steel);
+}
+.post-content ul, .post-content ol {
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+.post-content li { margin-bottom: 6px; }
+
+/* ─── ADMIN OVERLAY ─── */
+#admin-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 10000;
+  background: #f7f5f0;
+  font-family: 'Noto Sans TC', sans-serif;
+  flex-direction: column;
+}
+.admin-topbar {
+  height: 52px;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border-bottom: 2px solid var(--gold);
+  flex-shrink: 0;
+}
+.admin-topbar-brand {
+  padding: 0 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--white);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.admin-topbar-brand em { color: var(--gold); font-style: normal; }
+.admin-topbar-tabs {
+  display: flex;
+  height: 100%;
+  flex: 1;
+}
+.admin-tab-btn {
+  padding: 0 20px;
+  height: 100%;
+  background: none;
+  border: none;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.admin-tab-btn:hover { background: rgba(255,255,255,0.05); color: var(--white); }
+.admin-tab-btn.active { background: rgba(201,169,110,0.15); color: var(--gold); border-bottom: 2px solid var(--gold); }
+.admin-close-btn {
+  margin-left: auto;
+  padding: 0 20px;
+  height: 100%;
+  background: rgba(230,57,70,0.15);
+  border: none;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  color: #e63946;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.admin-close-btn:hover { background: rgba(230,57,70,0.3); }
+.admin-body {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 52px);
+  overflow: hidden;
+}
+/* WP-style left nav */
+.admin-wp-nav {
+  width: 180px;
+  min-width: 180px;
+  height: 100%;
+  background: #1e1e2e;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 12px 0;
+  flex-shrink: 0;
+}
+.admin-wp-nav-section {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.3);
+  padding: 16px 16px 6px;
+  text-transform: uppercase;
+}
+.admin-wp-nav-item {
+  display: block;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+  border-left: 3px solid transparent;
+}
+.admin-wp-nav-item:hover { background: rgba(255,255,255,0.06); color: #fff; }
+.admin-wp-nav-item.active { background: rgba(201,169,110,0.12); color: #c9a96e; border-left-color: #c9a96e; }
+
+/* Main area */
+.admin-main-area {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #f7f5f0;
+}
+#adminListView, #adminCategoriesView, #adminEditorArea {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  background: #f7f5f0;
+}
+#adminListView {
+  padding: 24px 32px;
+}
+#adminEditorArea {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.admin-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.admin-list-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.btn-new-post {
+  background: var(--navy);
+  color: var(--gold);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.btn-new-post:hover { opacity: 0.85; }
+
+/* Article table */
+.admin-post-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.admin-post-table thead tr {
+  background: #f0ede8;
+}
+.admin-post-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--steel);
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e8e4dc;
+}
+.admin-post-table td {
+  padding: 12px 16px;
+  font-size: 13px;
+  border-bottom: 1px solid #f0ede8;
+  vertical-align: middle;
+}
+.admin-post-table tr:last-child td { border-bottom: none; }
+.admin-post-table tr:hover td { background: #faf9f7; }
+.admin-table-title {
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+.admin-table-title:hover { color: var(--gold); }
+.admin-table-actions { display: flex; gap: 6px; align-items: center; }
+
+/* old sidebar compat - hidden */
+.admin-post-list { display: none; }
+.admin-post-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0ede8;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.admin-post-item:hover { background: #faf8f4; }
+.admin-post-item.active { background: #fff8ec; border-left: 3px solid var(--gold); }
+.admin-post-item-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.4;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.admin-post-item-meta {
+  font-size: 10px;
+  color: var(--steel);
+  margin-top: 3px;
+}
+.admin-post-item-del {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+.admin-post-item-del:hover { color: #e63946; background: rgba(230,57,70,0.08); }
+/* Editor area */
+.admin-editor-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+.admin-editor-toolbar {
+  padding: 10px 16px;
+  background: var(--white);
+  border-bottom: 1px solid #e8e4dc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.admin-field-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 16px;
+  background: #faf8f4;
+  border-bottom: 1px solid #e8e4dc;
+}
+.admin-field-row input, .admin-field-row select {
+  padding: 7px 12px;
+  border: 1.5px solid #e8e4dc;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  background: var(--white);
+  color: var(--navy);
+  outline: none;
+  transition: border 0.2s;
+}
+.admin-field-row input:focus, .admin-field-row select:focus { border-color: var(--gold); }
+.admin-title-input { flex: 1; min-width: 200px; font-size: 14px; font-weight: 600; }
+.toolbar-btn {
+  padding: 5px 10px;
+  background: var(--white);
+  border: 1.5px solid #e8e4dc;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--navy);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.toolbar-btn:hover { border-color: var(--gold); color: var(--gold); }
+.toolbar-btn.active { background: var(--navy); color: var(--gold); border-color: var(--navy); }
+.toolbar-sep { width: 1px; height: 20px; background: #e8e4dc; margin: 0 2px; }
+.btn-readmore {
+  background: rgba(201,169,110,0.12);
+  border-color: var(--gold);
+  color: var(--gold);
+  font-weight: 700;
+}
+.btn-save {
+  background: var(--navy);
+  color: var(--gold);
+  border-color: var(--navy);
+  font-weight: 700;
+  padding: 5px 16px;
+}
+.btn-save:hover { opacity: 0.85; }
+/* Tabs: visual / html */
+.editor-mode-tabs {
+  display: flex;
+  background: var(--white);
+  border-bottom: 1px solid #e8e4dc;
+  padding: 0 16px;
+  gap: 0;
+}
+.editor-mode-tab {
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: var(--steel);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.editor-mode-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+/* Content editable */
+.admin-visual-editor {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px 40px;
+  outline: none;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--navy);
+  background: var(--white);
+}
+.admin-visual-editor:empty::before {
+  content: '開始撰寫文章內容⋯⋯';
+  color: #bbb;
+  pointer-events: none;
+}
+.admin-visual-editor .readmore-marker {
+  display: block;
+  background: rgba(201,169,110,0.1);
+  border: 2px dashed var(--gold);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 700;
+  text-align: center;
+  margin: 16px 0;
+  cursor: default;
+  user-select: none;
+}
+.admin-html-editor {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #2d2d2d;
+  background: #1e1e2e;
+  color: #cdd6f4;
+  border: none;
+  resize: none;
+  outline: none;
+  width: 100%;
+  display: none;
+}
+.admin-no-post {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--steel);
+  font-size: 14px;
+  background: var(--white);
+}
+.admin-no-post-icon { font-size: 56px; margin-bottom: 20px; }
+/* Preview pane */
+.admin-preview-pane {
+  width: 340px;
+  background: #faf8f4;
+  border-left: 1px solid #e8e4dc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.admin-preview-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e8e4dc;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--steel);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-preview-inner {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #2d2d2d;
+}
+.admin-preview-inner h1,.admin-preview-inner h2,.admin-preview-inner h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy);
+  margin: 20px 0 10px;
+}
+.admin-preview-inner p { margin-bottom: 14px; }
+.admin-preview-inner img { max-width: 100%; border-radius: 6px; }
+.preview-readmore-line {
+  background: rgba(201,169,110,0.12);
+  border: 1.5px dashed var(--gold);
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: var(--gold);
+  text-align: center;
+  margin: 12px 0;
+  font-weight: 700;
+}
+/* Status toast */
+#admin-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--navy);
+  color: var(--gold);
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  z-index: 99999;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s;
+  pointer-events: none;
+}
+#admin-toast.show { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  .section-blog { padding: 60px 24px; }
+  .admin-preview-pane { display: none; }
+  .admin-sidebar { width: 200px; }
+  .post-page-inner { padding: 60px 20px 80px; }
+}
+
+/* ─── PAGE WRAPPER（限制最大寬度 1360px 置中）─── */
+#page-wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(0,0,0,0.08);
+}
+
+/* Nav 固定在 wrapper 內，不超出 1360px */
+nav {
+  max-width: 1360px;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  width: 100%;
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; max-width: 100%; left: 0; transform: none; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 100px 24px 60px; }
+  .hero-right { padding: 40px 24px 60px; display: none; }
+  .section-about { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+  .section-systems { padding: 80px 24px; }
+  .systems-grid { grid-template-columns: 1fr; }
+  .section-brands { padding: 80px 24px; }
+  .brands-grid { grid-template-columns: 1fr; }
+  .section-contact { padding: 80px 24px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+  footer { flex-direction: column; gap: 16px; text-align: center; padding: 30px 24px; }
+  .footer-copy { text-align: center; }
+}
+</style>
+<!-- claude寶貝 Schema JSON-LD: 店面預約系統加入 url + offers（NT$200/NT$400月繳）2026-06-19 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://wavecorp1.com/#website",
+      "name": "崴富國際有限公司",
+      "url": "https://wavecorp1.com",
+      "inLanguage": "zh-TW",
+      "description": "崴富國際有限公司，桃園在地，專為台灣中小企業打造雲端管理系統：POS收銀、店面預約、電子報、分店管理、租房管理。旗下品牌 CPshirt 職業服飾，企業制服採購首選。",
+      "publisher": { "@id": "https://wavecorp1.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "https://wavecorp1.com/#blog?q={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://wavecorp1.com/#organization",
+      "name": "崴富國際有限公司",
+      "alternateName": "WAVE ECOMMERCE",
+      "url": "https://wavecorp1.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wavecorp1.com/logo.png",
+        "width": 200,
+        "height": 60
+      },
+      "image": "https://wavecorp1.com/logo.png",
+      "taxID": "24554070",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "華亞三路39巷30號1樓",
+        "addressLocality": "龜山區",
+        "addressRegion": "桃園市",
+        "postalCode": "333",
+        "addressCountry": "TW"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.0345,
+        "longitude": 121.3706
+      },
+      "areaServed": { "@type": "Country", "name": "TW" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "03-328-0508",
+        "contactType": "customer service",
+        "areaServed": "TW",
+        "availableLanguage": "zh-TW"
+      },
+      "telephone": ["02-2876-0581", "03-328-0508"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "12:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.cpshirt.net",
+        "https://shopee.tw/willstanley",
+        "https://www.seehouse.tw"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "CPshirt 職業服飾電商系統",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://www.cpshirt.net",
+      "description": "桃園龜山實體門市，台灣最齊全的職業服飾選品，保全、房仲、餐飲制服一站購足。白色禮服襯衫 35–43號、西裝外套、西裝褲，10件以上可企業詢價。",
+      "brand": {
+        "@type": "Organization",
+        "name": "崴富國際有限公司"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "店面預約系統",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://wavecorp1.com/bookingv2/period-pay-v2.php",
+      "description": "線上預約管理系統，自動發送提醒通知，減少爽約率，整合 Google Calendar 與 LINE 自動通知，讓門市排班更有效率。",
+      "featureList": [
+        "Google Calendar 整合",
+        "LINE 自動提醒通知",
+        "預約衝突自動偵測"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "月繳基本方案",
+          "description": "預約系統完整功能，顧客確認信＋提醒信，Email 技術支援",
+          "price": "200",
+          "priceCurrency": "TWD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "200",
+            "priceCurrency": "TWD",
+            "unitCode": "MON"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "月繳進階方案",
+          "description": "進階預約數據報表，自訂提醒時間設定，優先技術支援",
+          "price": "400",
+          "priceCurrency": "TWD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "400",
+            "priceCurrency": "TWD",
+            "unitCode": "MON"
+          }
+        }
+      ],
+      "brand": {
+        "@type": "Organization",
+        "name": "崴富國際有限公司"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "EC SUPPLY 商品管理工具",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://wavecorp1.com/ecsupply/",
+      "description": "電商賣家採購管理平台，快速建立商品清單、比價採購、追蹤出貨進度，提升備貨效率。",
+      "featureList": [
+        "商品採購清單管理",
+        "多供應商比價追蹤",
+        "出貨進度即時掌控"
+      ],
+      "brand": {
+        "@type": "Organization",
+        "name": "崴富國際有限公司"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "三聯式統一發票計算機",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://wavecorp1.com/invoice/",
+      "description": "快速計算含稅、未稅金額，適用三聯式統一發票開立，適合企業採購與報帳使用。",
+      "featureList": [
+        "含稅 / 未稅快速換算",
+        "三聯式發票格式適用",
+        "手機平板均可操作"
+      ],
+      "brand": {
+        "@type": "Organization",
+        "name": "崴富國際有限公司"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "分店管理系統",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "多據點庫存與人員同步管控，總部一個畫面掌握所有分店動態，支援跨店庫存即時同步、員工出勤與業績報表、權限分級管理。",
+      "featureList": [
+        "跨店庫存即時同步",
+        "員工出勤與業績報表",
+        "權限分級管理"
+      ],
+      "brand": {
+        "@type": "Organization",
+        "name": "崴富國際有限公司"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "租房管理系統",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "房東的智慧助手，自動追蹤租約到期、租金到帳，支援電子合約簽署，多房源集中管理，讓租務管理輕鬆自在。",
+      "featureList": [
+        "租約到期自動提醒",
+        "電子合約簽署",
+        "多房源集中管理"
+      ],
+      "brand": {
+        "@type": "Organization",
+        "name": "崴富國際有限公司"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "電子報系統",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "精準分眾發送電子報，自動化行銷流程，搭配 GA4 數據追蹤，支援會員分群自動發送與拖曳式版型編輯器。",
+      "featureList": [
+        "會員分群自動發送",
+        "GA4 開信率追蹤",
+        "拖曳式版型編輯器"
+      ],
+      "brand": {
+        "@type": "Organization",
+        "name": "崴富國際有限公司"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="page-wrapper">
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo">
+    <div>
+      <div class="nav-logo-wave">WA<span>V</span>E</div>
+      <div class="nav-logo-sub">ECOMMERCE</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#systems">系統服務</a></li>
+    <li><a href="#brands">品牌旗下</a></li>
+    <li><a href="#about">關於我們</a></li>
+    <li><a href="#contact">聯絡我們</a></li>
+<!-- claude寶貝 cpshirt.net外連加nofollow符合公司外連規則 2026-06-19 -->
+    <li><a href="https://www.cpshirt.net" target="_blank" rel="noopener nofollow" class="nav-cta">CPshirt 商店</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">/ 崴富國際有限公司 ／ 統編 24554070</div>
+    <h1 class="hero-title">
+      企業管理
+      <em>更聰明</em>
+      的選擇
+    </h1>
+<!-- claude寶貝 Hero desc加入「店面預約系統」符合RankMath前10%+密度≥4規範 2026-06-19 -->
+    <p class="hero-desc">
+      專為台灣中小企業量身打造的雲端管理系統，包含店面預約系統、POS收銀、分店管理等工具。<br>
+      從門市到線上，從採購到收銀，一站式解決您的所有管理痛點。
+    </p>
+    <div class="hero-actions">
+      <a href="#systems" class="btn-primary">探索系統</a>
+      <a href="#contact" class="btn-ghost">聯絡客服 →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">6+</div>
+        <div class="stat-label">管理系統</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">TWD</div>
+        <div class="stat-label">台灣在地服務</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">LINE 客服</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="systems-preview">
+      <!-- claude寶貝 Hero CPshirt卡直連cpshirt.net增強SEO 2026-06-19 -->
+      <!-- claude寶貝 Hero CPshirt卡加nofollow符合公司外連規則 2026-06-19 -->
+      <a href="https://www.cpshirt.net/" target="_blank" rel="noopener nofollow" class="sys-card featured" style="text-decoration:none;">
+        <span class="sys-badge badge-live">LIVE</span>
+        <div class="sys-icon">🛍️</div>
+        <div class="sys-name">CPshirt 職業服飾</div>
+        <div class="sys-brief">桃園龜山職業服飾專賣，白襯衫、西裝外套、西裝褲，保全‧房仲‧餐飲首選。</div>
+      </a>
+      <a href="https://wavecorp1.com/ecsupply/" target="_blank" class="sys-card" style="text-decoration:none;">
+        <span class="sys-badge badge-live">LIVE</span>
+        <div class="sys-icon">📦</div>
+        <div class="sys-name">EC SUPPLY 商品管理</div>
+        <div class="sys-brief">電商賣家採購管理工具，快速比價與出貨追蹤。</div>
+      </a>
+      <a href="https://wavecorp1.com/invoice/" target="_blank" class="sys-card" style="text-decoration:none;">
+        <span class="sys-badge badge-live">LIVE</span>
+        <div class="sys-icon">🧾</div>
+        <div class="sys-name">三聯式發票計算機</div>
+        <div class="sys-brief">快速計算含稅金額，適用三聯式統一發票。</div>
+      </a>
+      <!-- claude寶貝 毛利率計算器 hero card 2026-06-27 -->
+      <a href="https://wavecorp1.com/invoice/gross_margin.html" target="_blank" class="sys-card" style="text-decoration:none;">
+        <span class="sys-badge badge-live">LIVE</span>
+        <div class="sys-icon">📊</div>
+        <div class="sys-name">毛利率計算器</div>
+        <div class="sys-brief">輸入售價與成本，立即算出毛利率、毛利金額，並反推建議售價。</div>
+      </a>
+      <!-- claude寶貝 店面預約系統 hero card 改為LIVE，連結銷售頁，更新簡介 2026-06-19 -->
+      <a href="https://wavecorp1.com/bookingv2/period-pay-v2.php" class="sys-card" style="text-decoration:none;" target="_blank" rel="noopener">
+        <span class="sys-badge badge-live">LIVE</span>
+        <div class="sys-icon">📅</div>
+        <div class="sys-name">店面預約系統</div>
+        <div class="sys-brief">NT$200/月起，立即開通專屬預約系統。</div>
+      </a>
+      <a href="#systems" class="sys-card" style="text-decoration:none;">
+        <span class="sys-badge badge-soon">即將上線</span>
+        <div class="sys-icon">📧</div>
+        <div class="sys-name">電子報系統</div>
+        <div class="sys-brief">精準發送、自動分眾，提升回購率。</div>
+      </a>
+      <a href="#systems" class="sys-card" style="text-decoration:none;">
+        <span class="sys-badge badge-soon">即將上線</span>
+        <div class="sys-icon">🏪</div>
+        <div class="sys-name">分店管理系統</div>
+        <div class="sys-brief">多點庫存與人員統一管控，一目了然。</div>
+      </a>
+      <a href="#systems" class="sys-card" style="text-decoration:none;">
+        <span class="sys-badge badge-soon">即將上線</span>
+        <div class="sys-icon">🏠</div>
+        <div class="sys-name">租房管理系統</div>
+        <div class="sys-brief">房東租務自動化，合約到期提醒不漏接。</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section-blog" id="blog">
+  <div class="blog-header">
+    <div class="about-label">/ 最新消息</div>
+    <h2>品牌動態・產業觀點</h2>
+    <div class="gold-divider"></div>
+  </div>
+  <div class="blog-grid" id="blogGrid">
+    <div class="blog-empty">
+      <span class="blog-empty-icon">📝</span>
+      目前尚無文章，敬請期待。
+    </div>
+  </div>
+  <div id="blogMoreWrap" style="text-align:center;margin-top:48px;display:none;">
+    <a href="/news/" class="blog-more-btn">更多文章 →</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="section-about-wrap">
+<section class="section-about" id="about">
+  <div>
+    <div class="about-label">/ 關於崴富國際</div>
+    <h2 class="about-heading">台灣在地<span>，</span><br>全方位企業管理解決方案</h2>
+    <p class="about-body">
+      崴富國際有限公司深耕台灣桃園，提供電商品牌、實體門市與小型企業所需的各類管理系統與服飾商品。我們相信每一家小企業都值得擁有大企業才有的管理工具。
+    </p>
+    <div class="about-info">
+      <div class="info-row"><strong>公司名稱</strong><span>崴富國際有限公司</span></div>
+      <div class="info-row"><strong>統一編號</strong><span>24554070</span></div>
+      <div class="info-row"><strong>地址</strong><span>333 桃園市龜山區華亞三路39巷30號1樓</span></div>
+      <div class="info-row"><strong>電話</strong><span>02-2876-0581 / 03-328-0508</span></div>
+      <div class="info-row"><strong>LINE 客服</strong><span>@cpshirt（週一至週日可回訊）</span></div>
+      <div class="info-row"><strong>營業時間</strong><span>週一至週五 12:00–18:00</span></div>
+    </div>
+  </div>
+  <div class="about-visual">
+    <div class="about-card-main">
+      <div class="about-card-stat">2+</div>
+      <div class="about-card-label">旗下品牌與服務</div>
+      <hr class="about-card-divider">
+      <div class="about-products">
+        <div class="product-tag"><span>👔</span> CPshirt 職業服飾</div>
+        <div class="product-tag"><span>🔧</span> 企業管理系統</div>
+        <div class="product-tag"><span>🏠</span> seehouse 線上看房</div>
+        <div class="product-tag"><span>📦</span> EC SUPPLY 採購工具</div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /.section-about-wrap -->
+
+<!-- SYSTEMS -->
+<section class="section-systems" id="systems">
+  <div class="sys-header">
+    <div class="about-label">/ 企業管理系統</div>
+    <h2>為中小企業打造的<br><em>數位管理工具</em></h2>
+    <p>從門市到線上通路，從採購到租務，涵蓋您每日營運所需的每個環節。</p>
+    <div class="gold-divider"></div>
+  </div>
+  <div class="systems-grid">
+    <!-- claude寶貝 CPshirt整張卡片改<a>標籤，SEO連結效果更強 2026-06-19 -->
+    <!-- claude寶貝 Systems grid CPshirt卡加nofollow符合公司外連規則 2026-06-19 -->
+    <a class="system-card" href="https://www.cpshirt.net/" target="_blank" rel="noopener nofollow" style="text-decoration:none;display:block;color:inherit;">
+      <span class="sys-status status-live">LIVE</span>
+      <div class="sys-num">01</div>
+      <span class="sys-big-icon">🛍️</span>
+      <h3 class="sys-card-name">CPshirt 職業服飾</h3>
+      <div class="sys-card-desc">桃園龜山實體門市，台灣最齊全的職業服飾選品，保全、房仲、餐飲制服一站購足。</div>
+      <div class="sys-features">
+        <div class="sys-feat">白色禮服襯衫 35–43號</div>
+        <div class="sys-feat">西裝外套 / 西裝褲</div>
+        <div class="sys-feat">10件以上企業詢價</div>
+        <div class="sys-feat" style="color:var(--gold);">前往 CPshirt 職業服飾專賣店 →</div>
+      </div>
+    </a>
+    <!-- claude寶貝 EC SUPPLY整張卡片改<a>標籤，SEO連結效果更強 2026-06-19 -->
+    <a class="system-card" href="https://wavecorp1.com/ecsupply/" style="text-decoration:none;display:block;color:inherit;">
+      <span class="sys-status status-live">LIVE</span>
+      <div class="sys-num">02</div>
+      <span class="sys-big-icon">📦</span>
+      <h3 class="sys-card-name">EC SUPPLY 商品管理工具</h3>
+      <div class="sys-card-desc">電商賣家採購管理平台，快速建立商品清單、比價採購、追蹤出貨進度，提升備貨效率。</div>
+      <div class="sys-features">
+        <div class="sys-feat">商品採購清單管理</div>
+        <div class="sys-feat">多供應商比價追蹤</div>
+        <div class="sys-feat">出貨進度即時掌控</div>
+        <div class="sys-feat" style="color:var(--gold);">使用 EC SUPPLY 賣家商品管理工具 →</div>
+      </div>
+    </a>
+    <!-- claude寶貝 三聯式發票計算機整張卡片改<a>標籤，SEO連結效果更強 2026-06-19 -->
+    <a class="system-card" href="https://wavecorp1.com/invoice/" style="text-decoration:none;display:block;color:inherit;">
+      <span class="sys-status status-live">LIVE</span>
+      <div class="sys-num">03</div>
+      <span class="sys-big-icon">🧾</span>
+      <h3 class="sys-card-name">三聯式統一發票計算機</h3>
+      <div class="sys-card-desc">快速計算含稅、未稅金額，適用三聯式統一發票開立，適合企業採購與報帳使用。</div>
+      <div class="sys-features">
+        <div class="sys-feat">含稅 / 未稅快速換算</div>
+        <div class="sys-feat">三聯式發票格式適用</div>
+        <div class="sys-feat">手機平板均可操作</div>
+        <div class="sys-feat" style="color:var(--gold);">使用三聯式統一發票計算機 →</div>
+      </div>
+    </a>
+    <!-- claude寶貝 毛利率計算器卡片上線 2026-06-27 -->
+    <a class="system-card" href="https://wavecorp1.com/invoice/gross_margin.html" style="text-decoration:none;display:block;color:inherit;">
+      <span class="sys-status status-live">LIVE</span>
+      <div class="sys-num">04</div>
+      <span class="sys-big-icon">📊</span>
+      <h3 class="sys-card-name">毛利率計算器</h3>
+      <div class="sys-card-desc">免費線上毛利率計算工具，輸入售價與成本即時算出毛利率、毛利金額與成本佔比，附反推售價計算器。</div>
+      <div class="sys-features">
+        <div class="sys-feat">毛利率即時計算</div>
+        <div class="sys-feat">反推售價（目標毛利率→建議售價）</div>
+        <div class="sys-feat">健康度評估圖表</div>
+        <div class="sys-feat" style="color:var(--gold);">使用免費毛利率計算器 →</div>
+      </div>
+    </a>
+    <!-- claude寶貝 店面預約系統 systems grid card 改為LIVE，轉換為<a>連結，新增定價CTA 2026-06-19 -->
+    <a class="system-card" href="https://wavecorp1.com/bookingv2/period-pay-v2.php" target="_blank" rel="noopener" style="text-decoration:none;display:block;color:inherit;">
+      <span class="sys-status status-live">LIVE</span>
+      <div class="sys-num">05</div>
+      <span class="sys-big-icon">📅</span>
+      <h3 class="sys-card-name">店面預約系統</h3>
+      <div class="sys-card-desc">線上預約管理，自動發送提醒通知，減少爽約率，讓門市排班更有效率。</div>
+      <div class="sys-features">
+        <div class="sys-feat">Google Calendar 整合</div>
+        <div class="sys-feat">LINE 自動提醒通知</div>
+        <div class="sys-feat">預約衝突自動偵測</div>
+        <div class="sys-feat" style="color:var(--gold);">NT$200/月起 → 立即訂閱店面預約系統</div>
+      </div>
+    </a>
+    <div class="system-card">
+      <span class="sys-status status-soon">即將上線</span>
+      <div class="sys-num">06</div>
+      <span class="sys-big-icon">📧</span>
+      <h3 class="sys-card-name">電子報系統</h3>
+      <div class="sys-card-desc">精準分眾發送，自動化行銷流程，搭配 GA4 數據追蹤，最大化每封信的轉換價值。</div>
+      <div class="sys-features">
+        <div class="sys-feat">會員分群自動發送</div>
+        <div class="sys-feat">GA4 開信率追蹤</div>
+        <div class="sys-feat">拖曳式版型編輯器</div>
+      </div>
+    </div>
+    <div class="system-card">
+      <span class="sys-status status-soon">即將上線</span>
+      <div class="sys-num">07</div>
+      <span class="sys-big-icon">🏪</span>
+      <h3 class="sys-card-name">分店管理系統</h3>
+      <div class="sys-card-desc">多據點庫存與人員同步管控，總部一個畫面掌握所有分店動態，告別 LINE 群組回報混亂。</div>
+      <div class="sys-features">
+        <div class="sys-feat">跨店庫存即時同步</div>
+        <div class="sys-feat">員工出勤與業績報表</div>
+        <div class="sys-feat">權限分級管理</div>
+      </div>
+    </div>
+    <div class="system-card">
+      <span class="sys-status status-soon">即將上線</span>
+      <div class="sys-num">08</div>
+      <span class="sys-big-icon">🏠</span>
+      <h3 class="sys-card-name">租房管理系統</h3>
+      <div class="sys-card-desc">房東的智慧助手，自動追蹤租約到期、租金到帳，電子合約簽署，讓租務管理輕鬆自在。</div>
+      <div class="sys-features">
+        <div class="sys-feat">租約到期自動提醒</div>
+        <div class="sys-feat">電子合約簽署</div>
+        <div class="sys-feat">多房源集中管理</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="section-brands" id="brands">
+  <div class="brands-header">
+    <div class="about-label">/ 旗下品牌</div>
+    <h2>崴富國際旗下品牌</h2>
+    <div class="gold-divider"></div>
+  </div>
+  <div class="brands-grid">
+    <a href="https://www.cpshirt.net" target="_blank" class="brand-card">
+      <h3 class="brand-logo">CP<span>shirt</span></h3>
+      <div class="brand-domain">cpshirt.net</div>
+      <div class="brand-desc">台灣桃園龜山職業服飾專賣店，白色禮服襯衫、西裝外套、西裝褲，保全‧房仲‧餐廳制服採購首選，鄰近機場捷運 A7 站。</div>
+      <div class="brand-tags">
+        <span class="btag">職業服飾</span>
+        <span class="btag">企業制服</span>
+        <span class="btag">實體門市</span>
+        <span class="btag">Shopline</span>
+      </div>
+    </a>
+    <a href="https://shopee.tw/willstanley" target="_blank" class="brand-card">
+      <h3 class="brand-logo">CP<span>shirt</span></h3>
+      <div class="brand-domain">shopee.tw/willstanley</div>
+      <div class="brand-desc">蝦皮官方旗艦店，白襯衫、免燙抗皺系列熱銷中，面試穿搭推薦，全台宅配快速到貨。</div>
+      <div class="brand-tags">
+        <span class="btag">蝦皮店鋪</span>
+        <span class="btag">免燙白襯衫</span>
+        <span class="btag">快速出貨</span>
+      </div>
+    </a>
+    <a href="https://www.seehouse.tw" target="_blank" class="brand-card">
+      <h3 class="brand-logo">see<span>house</span></h3>
+      <div class="brand-domain">seehouse.tw</div>
+      <div class="brand-desc">線上看房平台與商品目錄，提供租房資訊查詢及 EC SUPPLY 採購管理工具，電商賣家採購效率升級。</div>
+      <div class="brand-tags">
+        <span class="btag">線上看房</span>
+        <span class="btag">採購工具</span>
+        <span class="btag">電商系統</span>
+      </div>
+    </a>
+    <div class="brand-card" style="border-style: dashed; cursor: default;">
+      <h3 class="brand-logo" style="color:#ccc;">MORE <span style="color:var(--gold-light);">+</span></h3>
+      <div class="brand-domain" style="color:#bbb;">即將推出</div>
+      <div class="brand-desc" style="color:#bbb;">更多旗下品牌與服務正在籌備中，敬請期待崴富國際的最新動態。</div>
+      <div class="brand-tags">
+        <span class="btag" style="opacity:0.5;">租房管理</span>
+        <span class="btag" style="opacity:0.5;">分店系統</span>
+        <span class="btag" style="opacity:0.5;">更多…</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SINGLE POST PAGE -->
+<div id="post-page">
+  <div class="post-page-inner">
+    <button class="post-back-btn" onclick="closePost()">← 返回首頁</button>
+    <div class="post-meta" id="postMeta"></div>
+    <h1 class="post-title" id="postTitle"></h1>
+    <div class="post-divider"></div>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1191429468053714"
+         crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1191429468053714"
+         data-ad-slot="3964431784"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <div class="post-content" id="postContent"></div>
+  </div>
+</div>
+
+<!-- ADMIN OVERLAY -->
+<div id="admin-overlay">
+  <div class="admin-topbar">
+    <div class="admin-topbar-brand">⚙ <em>Wave</em> 後台管理</div>
+    <button class="admin-close-btn" onclick="closeAdmin()">✕ 關閉後台（F11）</button>
+  </div>
+  <div class="admin-body">
+
+    <!-- 左側導覽 WP 風格 -->
+    <div class="admin-wp-nav">
+      <div class="admin-wp-nav-section">文章</div>
+      <a class="admin-wp-nav-item active" id="navAllPosts" onclick="adminShowView('list')">📋 所有文章</a>
+      <a class="admin-wp-nav-item" id="navNewPost" onclick="adminNewPost()">＋ 新增文章</a>
+      <div class="admin-wp-nav-section">設定</div>
+      <a class="admin-wp-nav-item" id="navCategories" onclick="adminShowView('categories')">🏷 分類設定</a>
+    </div>
+
+    <!-- 右側主區域 -->
+    <div class="admin-main-area" id="adminMainArea">
+
+      <!-- 文章列表 view -->
+      <div id="adminListView">
+        <div class="admin-list-header">
+          <h2>所有文章</h2>
+          <button class="btn-new-post" onclick="adminNewPost()">＋ 新增文章</button>
+        </div>
+        <table class="admin-post-table">
+          <thead>
+            <tr>
+              <th>標題</th>
+              <th style="width:150px;">分類</th>
+              <th style="width:100px;">日期</th>
+              <th style="width:90px;">狀態</th>
+              <th style="width:100px;">操作</th>
+            </tr>
+          </thead>
+          <tbody id="adminPostTableBody"></tbody>
+        </table>
+      </div>
+
+      <!-- 分類設定 view -->
+      <div id="adminCategoriesView" style="display:none;">
+        <div class="admin-list-header">
+          <h2>分類設定</h2>
+        </div>
+        <div style="padding:24px;max-width:480px;">
+          <div style="margin-bottom:16px;">
+            <label style="font-size:13px;font-weight:600;color:#1a1a2e;display:block;margin-bottom:6px;">新增分類</label>
+            <div style="display:flex;gap:8px;">
+              <input type="text" id="newCategoryInput" placeholder="輸入分類名稱" style="flex:1;padding:8px 12px;border:1.5px solid #e8e4dc;border-radius:6px;font-size:13px;">
+              <button onclick="adminAddCategory()" style="padding:8px 16px;background:#1a1a2e;color:#c9a96e;border:none;border-radius:6px;font-weight:700;cursor:pointer;">新增</button>
+            </div>
+          </div>
+          <div id="categoryList" style="border:1px solid #e8e4dc;border-radius:8px;overflow:hidden;"></div>
+        </div>
+      </div>
+
+      <!-- 編輯器 view -->
+      <div id="adminEditorArea" style="display:none;">
+      <div class="admin-no-post" id="adminNoPost">
+        <div class="admin-no-post-icon">✍️</div>
+        <div>點選左側文章，或按「＋ 新增」開始撰寫</div>
+      </div>
+      <div id="adminEditorPanel" style="display:none; flex:1; flex-direction:column; overflow:hidden;">
+        <!-- 返回列表 -->
+        <div style="padding:8px 16px;background:#f7f5f0;border-bottom:1px solid #e8e4dc;">
+          <button onclick="adminShowView('list')" style="background:none;border:none;color:#c9a96e;font-size:13px;cursor:pointer;font-weight:600;font-family:inherit;">← 所有文章</button>
+        </div>
+        <!-- 第一列：基本資訊 -->
+        <div class="admin-field-row">
+          <input type="text" id="adminTitle" class="admin-title-input" placeholder="文章標題" oninput="adminAutoSlug()">
+          <input type="text" id="adminAuthor" placeholder="作者" value="版主" style="width:100px;">
+          <input type="text" id="adminCategory" placeholder="分類" style="width:120px;">
+          <input type="text" id="adminDate" placeholder="日期（2026-05-20）" style="width:150px;">
+          <button class="toolbar-btn btn-save" onclick="adminSave()">💾 草稿</button>
+          <button class="toolbar-btn" style="background:#1a1a2e;color:#c9a96e;border-color:#1a1a2e;font-weight:700;padding:5px 16px;" onclick="adminPublish()">🚀 發布</button>
+        </div>
+        <!-- 第二列：SEO + Schema -->
+        <div class="admin-field-row" style="background:#f0f8ff; border-bottom:1px solid #d0e8f8;">
+          <span style="font-size:11px;color:#185fa5;font-weight:700;letter-spacing:1px;">SEO</span>
+          <input type="text" id="adminSlug" placeholder="URL Slug（英文）" style="width:180px;">
+          <input type="text" id="adminMetaTitle" placeholder="Meta Title" style="flex:1;min-width:160px;">
+          <input type="text" id="adminMetaDesc" placeholder="Meta Description" style="flex:1;min-width:200px;">
+          <input type="text" id="adminOgImage" placeholder="OG 圖片 URL" style="width:160px;">
+          <input type="text" id="adminKeywords" placeholder="Keywords（逗號分隔，6~10個）" style="flex:1;min-width:200px;">
+          <button class="toolbar-btn" style="font-size:11px;border-color:#185fa5;color:#185fa5;" onclick="adminOpenSchemaPanel()">⚙ Schema</button>
+        </div>
+        <!-- 工具列 -->
+        <div class="admin-editor-toolbar">
+          <button class="toolbar-btn" onclick="adminExec('bold')"><b>B</b></button>
+          <button class="toolbar-btn" onclick="adminExec('italic')"><i>I</i></button>
+          <button class="toolbar-btn" onclick="adminExec('underline')"><u>U</u></button>
+          <div class="toolbar-sep"></div>
+          <button class="toolbar-btn" onclick="adminExec('formatBlock','h2')">H2</button>
+          <button class="toolbar-btn" onclick="adminExec('formatBlock','h3')">H3</button>
+          <button class="toolbar-btn" onclick="adminExec('formatBlock','p')">¶ 段落</button>
+          <div class="toolbar-sep"></div>
+          <button class="toolbar-btn" onclick="adminExec('insertUnorderedList')">• 清單</button>
+          <button class="toolbar-btn" onclick="adminExecLink()">🔗 連結</button>
+          <button class="toolbar-btn" onclick="adminInsertImage()">🖼 圖片URL</button>
+          <div class="toolbar-sep"></div>
+          <button class="toolbar-btn btn-readmore" onclick="adminInsertReadMore()">── 閱讀更多 ──</button>
+          <div class="toolbar-sep"></div>
+          <select onchange="adminExec('foreColor',this.value); this.selectedIndex=0;" style="padding:5px;border:1.5px solid #e8e4dc;border-radius:5px;font-size:12px;font-family:inherit;">
+            <option value="">字色▾</option>
+            <option value="#1a1a2e">深藍</option>
+            <option value="#c9a96e">金色</option>
+            <option value="#e63946">紅色</option>
+            <option value="#27ae60">綠色</option>
+          </select>
+        </div>
+        <!-- 模式切換 -->
+        <div class="editor-mode-tabs">
+          <button class="editor-mode-tab active" onclick="adminSetMode('visual')" id="modeTabVisual">🖊 視覺化編輯</button>
+          <button class="editor-mode-tab" onclick="adminSetMode('html')" id="modeTabHTML">&lt;/&gt; HTML 原始碼</button>
+        </div>
+        <!-- 編輯器 + 預覽 -->
+        <div style="display:flex; flex:1; overflow:hidden;">
+          <div id="visualEditor" class="admin-visual-editor" contenteditable="true" oninput="adminUpdatePreview()"></div>
+          <textarea id="htmlEditor" class="admin-html-editor" oninput="adminSyncFromHTML()" placeholder="在這裡貼上 HTML 原始碼⋯"></textarea>
+          <div class="admin-preview-pane">
+            <div class="admin-preview-header">
+              <span>即時預覽</span>
+              <span style="color:#bbb;font-size:10px;">PREVIEW</span>
+            </div>
+            <div class="admin-preview-inner" id="adminPreview"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Schema 面板 -->
+      <div id="adminSchemaPanel" style="display:none;position:absolute;right:0;top:0;width:420px;height:100%;background:#1e1e2e;z-index:200;flex-direction:column;border-left:2px solid #c9a96e;">
+        <div style="padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;">
+          <span style="color:#c9a96e;font-weight:700;font-size:13px;">⚙ 自訂 Schema JSON-LD</span>
+          <button onclick="adminCloseSchemaPanel()" style="background:none;border:none;color:#ccc;cursor:pointer;font-size:16px;">✕</button>
+        </div>
+        <div style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6;">貼上完整的 JSON-LD 內容（不含 &lt;script&gt; 標籤）。留空則自動使用 NewsArticle 預設 schema。</div>
+          <button onclick="window.open('https://search.google.com/test/rich-results','_blank')" style="margin-top:8px;padding:4px 12px;background:rgba(201,169,110,0.15);border:1px solid #c9a96e;border-radius:5px;color:#c9a96e;font-size:11px;cursor:pointer;font-family:inherit;">🔍 Google Rich Results Test</button>
+        </div>
+        <textarea id="adminSchema" style="flex:1;background:#1e1e2e;color:#cdd6f4;border:none;padding:16px;font-family:'Space Mono',monospace;font-size:12px;line-height:1.7;resize:none;outline:none;width:100%;" placeholder='{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "headline": "文章標題",
+      "datePublished": "2026-05-20",
+      "dateModified": "2026-05-20",
+      "author": {
+        "@type": "Person",
+        "name": "版主",
+        "url": "https://wavecorp1.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "崴富國際有限公司",
+        "url": "https://wavecorp1.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://wavecorp1.com/logo.png",
+          "width": 200,
+          "height": 60
+        }
+      },
+      "url": "https://wavecorp1.com/news/your-slug.html",
+      "description": "文章摘要描述",
+      "image": "https://wavecorp1.com/images/cover.jpg",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wavecorp1.com/news/your-slug.html"
+      },
+      "keywords": "關鍵字1, 關鍵字2"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://wavecorp1.com" },
+        { "@type": "ListItem", "position": 2, "name": "最新消息", "item": "https://wavecorp1.com/#blog" },
+        { "@type": "ListItem", "position": 3, "name": "文章標題", "item": "https://wavecorp1.com/news/your-slug.html" }
+      ]
+    }
+  ]
+}'></textarea>
+      </div><!-- end adminSchemaPanel -->
+      </div><!-- end adminEditorArea -->
+    </div><!-- end adminMainArea -->
+  </div><!-- end admin-body -->
+</div><!-- end admin-overlay -->
+
+<!-- 回到最上方 -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到最上方">&#8679;</button>
+
+<!-- Toast -->
+<div id="admin-toast"></div>
+
+<!-- CONTACT -->
+<section class="section-contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <div class="about-label">/ 聯絡我們</div>
+      <h2>有任何問題<br>直接找<em>我們</em></h2>
+      <p>客服以 LINE 為主，消費者請盡量透過 LINE 聯繫店長，回覆速度最快。電話服務僅限平日，假日不提供電話服務。</p>
+    </div>
+    <div class="contact-methods">
+      <a href="https://line.me/ti/p/~@528ekfzj" target="_blank" class="contact-item">
+        <div class="contact-icon line">💬</div>
+        <div class="contact-text">
+          <strong>LINE 客服（推薦）</strong>
+          <span>@528ekfzj（記得加 @）<br>週一至週日均可回訊</span>
+        </div>
+      </a>
+      <div class="contact-item">
+        <div class="contact-icon tel">📞</div>
+        <div class="contact-text">
+          <strong>電話</strong>
+          <span>02-2876-0581 / 03-328-0508<br>週一至週五 12:00–18:00</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon addr">📍</div>
+        <div class="contact-text">
+          <strong>實體門市地址</strong>
+          <span>333 桃園市龜山區華亞三路39巷30號1樓<br>機場捷運 A7 站附近</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">WA<span>V</span>E ECOMMERCE</div>
+    <div class="footer-corp">崴富國際有限公司 統編：24554070</div>
+  </div>
+  <div class="footer-copy">
+    &copy; 2026 崴富國際有限公司<br>
+    333 桃園市龜山區華亞三路39巷30號1樓
+  </div>
+</footer>
+
+</div><!-- /#page-wrapper -->
+
+<script>
+/* ══════════════════════════════════════════════════
+   CONFIG
+══════════════════════════════════════════════════ */
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbx6W0RYUzWBfYh3zBLMRi0KAKwfzzl5zC4LSYOnYTf2jXt-swVI7IVDygW9TJkSiYuddw/exec';
+const SUPABASE_URL  = 'https://ljbtnysponckfonzcdpa.supabase.co';
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxqYnRueXNwb25ja2ZvbnpjZHBhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkyODMyNTksImV4cCI6MjA5NDg1OTI1OX0.Y9MaYpWeb664DTbxNeMFB2uVRn8Kinuf-soh0plJ9V8';
+
+/* ── Scrolled nav ── */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+/* ── Scroll reveal ── */
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.system-card, .brand-card, .about-card-main').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  revealObserver.observe(el);
+});
+
+/* ══════════════════════════════════════════════════
+   BLOG — 首頁渲染（從 Supabase 讀已發布文章）
+══════════════════════════════════════════════════ */
+let allPosts = [];
+
+async function loadBlogPosts() {
+  const grid = document.getElementById('blogGrid');
+  try {
+    // 多抓一筆（7篇）判斷是否超過6篇
+    const res = await fetch(
+      SUPABASE_URL + '/rest/v1/posts?status=eq.published&order=created_at.desc&limit=7',
+      { headers: { 'apikey': SUPABASE_ANON, 'Authorization': 'Bearer ' + SUPABASE_ANON } }
+    );
+    const posts = await res.json() || [];
+    const hasMore = posts.length > 6;
+    allPosts = posts.slice(0, 6);
+    renderBlogGrid(allPosts);
+    // 超過6篇顯示「更多文章」按鈕
+    const moreWrap = document.getElementById('blogMoreWrap');
+    if (moreWrap) moreWrap.style.display = hasMore ? 'block' : 'none';
+  } catch(e) {
+    grid.innerHTML = `<div class="blog-empty"><span class="blog-empty-icon">📡</span>無法載入文章，請稍後再試。</div>`;
+  }
+}
+
+function renderBlogGrid(posts) {
+  const grid = document.getElementById('blogGrid');
+  if (!posts || !posts.length) {
+    grid.innerHTML = `<div class="blog-empty"><span class="blog-empty-icon">📝</span>目前尚無文章，敬請期待。</div>`;
+    return;
+  }
+  grid.innerHTML = posts.map(p => {
+    const MARKER = '<!--readmore-->';
+    const hasMore = (p.content || '').includes(MARKER);
+    const excerptHTML = hasMore
+      ? (p.content || '').split(MARKER)[0]
+      : stripTags((p.content || '').slice(0, 200)) + '…';
+    return `
+    <a class="blog-card" href="#" data-slug="${esc(p.slug)}" onclick="if(this.dataset.slug){window.open('/news/'+encodeURIComponent(this.dataset.slug)+'.html','_blank');}return false;" rel="nofollow">
+      <div class="blog-card-img-placeholder">📰</div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span>${esc(p.date||'')}</span>
+          ${p.category ? `<span class="blog-card-cat">${esc(p.category)}</span>` : ''}
+        </div>
+        <div class="blog-card-title">${esc(p.title||'（無標題）')}</div>
+        <div class="blog-card-excerpt">${excerptHTML}</div>
+        ${hasMore ? `<span class="blog-card-readmore">閱讀全文 →</span>` : ''}
+      </div>
+    </a>`;
+  }).join('');
+}
+
+function stripTags(html) {
+  const d = document.createElement('div');
+  d.innerHTML = html;
+  return d.innerText || '';
+}
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ══════════════════════════════════════════════════
+   ADMIN SYSTEM
+══════════════════════════════════════════════════ */
+let adminCurrentId = null;
+let adminEditorMode = 'visual';
+let adminPosts = [];
+
+/* ── F11 ── */
+document.addEventListener('keydown', e => {
+  if (e.key === 'F11') { e.preventDefault(); toggleAdmin(); }
+  if ((e.ctrlKey||e.metaKey) && e.key==='s') {
+    if (adminIsOpen()) { e.preventDefault(); adminSave(); }
+  }
+});
+
+function adminIsOpen() {
+  const o = document.getElementById('admin-overlay');
+  return o.style.display === 'flex';
+}
+function toggleAdmin() { adminIsOpen() ? closeAdmin() : openAdmin(); }
+
+async function openAdmin() {
+  const o = document.getElementById('admin-overlay');
+  o.style.display = 'flex';
+  o.style.flexDirection = 'column';
+  adminShowView('list');
+  showToast('⏳ 載入文章中…');
+  await adminLoadFromGAS();
+}
+
+function closeAdmin() {
+  document.getElementById('admin-overlay').style.display = 'none';
+  loadBlogPosts(); // 重新渲染首頁
+}
+
+/* ── 從 Supabase 讀所有文章（後台，含草稿）── */
+async function adminLoadFromGAS() {
+  try {
+    const res = await fetch(
+      SUPABASE_URL + '/rest/v1/posts?order=created_at.desc',
+      { headers: { 'apikey': SUPABASE_ANON, 'Authorization': 'Bearer ' + SUPABASE_ANON } }
+    );
+    adminPosts = await res.json() || [];
+    renderAdminSidebar();
+    showToast('✅ 文章已同步');
+  } catch(e) {
+    showToast('❌ 無法連線 Supabase');
+    try { adminPosts = JSON.parse(localStorage.getItem('wave_blog_posts')) || []; } catch(e2) {}
+    renderAdminSidebar();
+  }
+}
+
+/* ── 切換左側導覽 view ── */
+function adminShowView(view) {
+  document.getElementById('adminListView').style.display       = view==='list'       ? 'block' : 'none';
+  document.getElementById('adminCategoriesView').style.display = view==='categories' ? 'block' : 'none';
+  document.getElementById('adminEditorArea').style.display     = view==='editor'     ? 'flex'  : 'none';
+  document.querySelectorAll('.admin-wp-nav-item').forEach(el => el.classList.remove('active'));
+  if(view==='list')       document.getElementById('navAllPosts').classList.add('active');
+  if(view==='categories') document.getElementById('navCategories').classList.add('active');
+  if(view==='editor')     document.getElementById('navNewPost').classList.add('active');
+}
+
+/* ── 文章列表表格渲染 ── */
+function renderAdminSidebar() {
+  renderAdminTable();
+  renderCategoryList();
+}
+
+function renderAdminTable() {
+  const tbody = document.getElementById('adminPostTableBody');
+  if (!tbody) return;
+  if (!adminPosts.length) {
+    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:40px;color:#aaa;">尚無文章，按「＋ 新增文章」開始</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = adminPosts.map(p => `
+    <tr>
+      <td>
+        <a class="admin-table-title" onclick="adminLoadPost('${p.id}')">${esc(p.title||'（無標題）')}</a>
+        <div style="font-size:11px;color:#aaa;margin-top:3px;">
+          ${p.slug ? `slug: ${p.slug}` : ''}
+        </div>
+      </td>
+      <td style="font-size:12px;color:var(--steel);">${esc(p.category||'—')}</td>
+      <td style="font-size:12px;color:var(--steel);">${p.date||'—'}</td>
+      <td>
+        <span style="padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;background:${p.status==='published'?'rgba(39,174,96,0.12)':'rgba(201,169,110,0.12)'};color:${p.status==='published'?'#27ae60':'#c9a96e'};">
+          ${p.status==='published'?'已發布':'草稿'}
+        </span>
+      </td>
+      <td>
+        <div class="admin-table-actions">
+          <button onclick="adminLoadPost('${p.id}')" style="padding:4px 10px;font-size:11px;background:#1a1a2e;color:#c9a96e;border:none;border-radius:4px;cursor:pointer;">編輯</button>
+          ${p.status==='published' && p.slug ? `<a href="/news/${p.slug}.html" target="_blank" style="padding:4px 10px;font-size:11px;background:rgba(201,169,110,0.1);color:#c9a96e;border:1px solid rgba(201,169,110,0.3);border-radius:4px;text-decoration:none;">查看</a>` : ''}
+          <button onclick="adminDeletePost('${p.id}')" style="padding:4px 8px;font-size:11px;background:rgba(230,57,70,0.1);color:#e63946;border:1px solid rgba(230,57,70,0.2);border-radius:4px;cursor:pointer;">刪除</button>
+        </div>
+      </td>
+    </tr>`).join('');
+}
+
+/* ── 分類列表 ── */
+let adminCategories = [];
+function renderCategoryList() {
+  const cats = [...new Set(adminPosts.map(p=>p.category).filter(Boolean))];
+  adminCategories = cats;
+  const el = document.getElementById('categoryList');
+  if (!el) return;
+  if (!cats.length) { el.innerHTML = `<div style="padding:16px;color:#aaa;font-size:13px;">尚無分類</div>`; return; }
+  el.innerHTML = cats.map(c => {
+    const count = adminPosts.filter(p=>p.category===c).length;
+    return `
+    <div style="padding:10px 16px;border-bottom:1px solid #f0ede8;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+      <span>${esc(c)}</span>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-size:11px;color:#aaa;">${count} 篇</span>
+        <button onclick="adminRenameCategory('${esc(c)}')" style="padding:3px 10px;font-size:11px;background:none;border:1.5px solid #c9a96e;color:#c9a96e;border-radius:5px;cursor:pointer;font-family:inherit;font-weight:600;">改名</button>
+        <button onclick="adminDeleteCategory('${esc(c)}')" style="padding:3px 10px;font-size:11px;background:none;border:1.5px solid #e63946;color:#e63946;border-radius:5px;cursor:pointer;font-family:inherit;font-weight:600;">刪除</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+async function adminRenameCategory(oldName) {
+  const newName = prompt(`將「${oldName}」改名為：`, oldName);
+  if (!newName || newName.trim() === oldName) return;
+  const trimmed = newName.trim();
+  const affected = adminPosts.filter(p => p.category === oldName);
+  if (!affected.length) { renderCategoryList(); return; }
+  showToast(`⏳ 更新 ${affected.length} 篇文章中…`);
+  for (const post of affected) {
+    post.category = trimmed;
+    try {
+      await fetch(GAS_URL, { method: 'POST', body: JSON.stringify({ action: 'save', post }) });
+    } catch(e) {}
+  }
+  localStorage.setItem('wave_blog_posts', JSON.stringify(adminPosts));
+  renderCategoryList();
+  renderAdminTable();
+  showToast(`✅ 已將「${oldName}」改名為「${trimmed}」`);
+}
+
+async function adminDeleteCategory(name) {
+  const count = adminPosts.filter(p => p.category === name).length;
+  if (!confirm(`確定刪除分類「${name}」？\n\n此分類有 ${count} 篇文章，刪除後將自動移至「未分類」。`)) return;
+  const affected = adminPosts.filter(p => p.category === name);
+  showToast(`⏳ 更新 ${affected.length} 篇文章中…`);
+  for (const post of affected) {
+    post.category = '未分類';
+    try {
+      await fetch(GAS_URL, { method: 'POST', body: JSON.stringify({ action: 'save', post }) });
+    } catch(e) {}
+  }
+  localStorage.setItem('wave_blog_posts', JSON.stringify(adminPosts));
+  renderCategoryList();
+  renderAdminTable();
+  showToast(`🗑 分類「${name}」已刪除，文章移至未分類`);
+}
+function adminAddCategory() {
+  const input = document.getElementById('newCategoryInput');
+  const val = input.value.trim();
+  if (!val) return;
+  if (!adminCategories.includes(val)) adminCategories.push(val);
+  input.value = '';
+  showToast('✅ 分類已新增，發文時輸入此分類名稱即可');
+}
+
+/* ── 新增文章 ── */
+function adminNewPost() {
+  const today = new Date().toISOString().slice(0,10);
+  const id = Date.now().toString(36) + Math.random().toString(36).slice(2,5);
+  const p = { id, title:'', slug:'', author:'版主', category:'', date:today,
+               status:'draft', content:'', metaTitle:'', metaDesc:'', ogImage:'', keywords:'', schema:'' };
+  adminPosts.unshift(p);
+  renderAdminTable();
+  adminLoadPost(p.id);
+}
+
+/* ── 載入文章到編輯器 ── */
+function adminLoadPost(id) {
+  adminCurrentId = id;
+  const p = adminPosts.find(x => x.id===id);
+  if (!p) return;
+  adminShowView('editor');
+  document.getElementById('adminNoPost').style.display = 'none';
+  const panel = document.getElementById('adminEditorPanel');
+  panel.style.display = 'flex';
+  panel.style.flexDirection = 'column';
+  panel.style.flex = '1';
+  panel.style.overflow = 'hidden';
+
+  document.getElementById('adminTitle').value    = p.title    || '';
+  document.getElementById('adminAuthor').value   = p.author   || '版主';
+  document.getElementById('adminCategory').value = p.category || '';
+  document.getElementById('adminDate').value     = p.date     || '';
+  document.getElementById('adminSlug').value     = p.slug     || '';
+  document.getElementById('adminMetaTitle').value= p.metaTitle|| '';
+  document.getElementById('adminMetaDesc').value = p.metaDesc || '';
+  document.getElementById('adminOgImage').value  = p.ogImage  || '';
+  document.getElementById('adminKeywords').value = p.keywords || '';
+  document.getElementById('adminSchema').value   = p.schema   || '';
+
+  const htmlForEdit = (p.content||'').replace(/<!--readmore-->/g,
+    '<div class="readmore-marker" contenteditable="false">── 閱讀更多（以下需點進文章才看得到）──</div>');
+  document.getElementById('visualEditor').innerHTML = htmlForEdit;
+  document.getElementById('htmlEditor').value = p.content || '';
+  adminEditorMode = 'visual';
+  document.getElementById('visualEditor').style.display = 'block';
+  document.getElementById('htmlEditor').style.display   = 'none';
+  document.getElementById('modeTabVisual').classList.add('active');
+  document.getElementById('modeTabHTML').classList.remove('active');
+  adminUpdatePreview();
+  renderAdminSidebar();
+}
+
+/* ── 取得當前編輯內容 ── */
+function adminGetCurrentPost() {
+  if (!adminCurrentId) return null;
+  const p = adminPosts.find(x => x.id===adminCurrentId);
+  if (!p) return null;
+  let content;
+  if (adminEditorMode === 'html') {
+    content = document.getElementById('htmlEditor').value;
+  } else {
+    content = document.getElementById('visualEditor').innerHTML
+      .replace(/<div[^>]*class="[^"]*readmore-marker[^"]*"[^>]*>.*?<\/div>/g, '<!--readmore-->');
+  }
+  return {
+    ...p,
+    title:     document.getElementById('adminTitle').value,
+    author:    document.getElementById('adminAuthor').value || '版主',
+    category:  document.getElementById('adminCategory').value,
+    date:      document.getElementById('adminDate').value,
+    slug:      document.getElementById('adminSlug').value || slugify(document.getElementById('adminTitle').value),
+    metaTitle: document.getElementById('adminMetaTitle').value,
+    metaDesc:  document.getElementById('adminMetaDesc').value,
+    ogImage:   document.getElementById('adminOgImage').value,
+    keywords:  document.getElementById('adminKeywords').value,
+    schema:    document.getElementById('adminSchema').value,
+    content
+  };
+}
+
+/* ── 儲存草稿 ── */
+async function adminSave() {
+  const post = adminGetCurrentPost();
+  if (!post) return;
+  post.status = post.status || 'draft';
+  const idx = adminPosts.findIndex(x => x.id===post.id);
+  if (idx>=0) adminPosts[idx] = post; else adminPosts.unshift(post);
+  localStorage.setItem('wave_blog_posts', JSON.stringify(adminPosts));
+  showToast('⏳ 儲存中…');
+  try {
+    const res = await fetch(GAS_URL, {
+      method: 'POST',
+      body: JSON.stringify({ action: 'save', post })
+    });
+    const data = await res.json();
+    if (data.ok) showToast('✅ 草稿已儲存');
+    else showToast('⚠️ ' + (data.error || '儲存失敗'));
+  } catch(e) {
+    showToast('⚠️ 已存本機，GAS 連線失敗');
+  }
+  renderAdminSidebar();
+}
+
+/* ── 發布文章 ── */
+async function adminPublish() {
+  const post = adminGetCurrentPost();
+  if (!post) return;
+  if (!post.slug) { showToast('❌ 請填寫 URL Slug'); return; }
+  if (!confirm(`確定發布「${post.title}」？\n\n發布後網址：\nwavecorp1.com/news/${post.slug}.html`)) return;
+  post.status = 'published';
+  const idx = adminPosts.findIndex(x => x.id===post.id);
+  if (idx>=0) adminPosts[idx] = post; else adminPosts.unshift(post);
+  localStorage.setItem('wave_blog_posts', JSON.stringify(adminPosts));
+  showToast('⏳ 發布中，推送 GitHub…');
+  try {
+    const res = await fetch(GAS_URL, {
+      method: 'POST',
+      body: JSON.stringify({ action: 'publish', post })
+    });
+    const data = await res.json();
+    if (data.ok) showToast('🚀 已發布！wavecorp1.com/news/' + post.slug + '.html');
+    else showToast('⚠️ ' + (data.error || '發布失敗'));
+  } catch(e) {
+    showToast('⚠️ 發布失敗，請重試');
+  }
+  renderAdminSidebar();
+}
+
+/* ── 刪除文章 ── */
+async function adminDeletePost(id) {
+  if (!confirm('確定要刪除這篇文章？')) return;
+  adminPosts = adminPosts.filter(x => x.id!==id);
+  localStorage.setItem('wave_blog_posts', JSON.stringify(adminPosts));
+  if (adminCurrentId === id) {
+    adminCurrentId = null;
+    document.getElementById('adminNoPost').style.display = 'flex';
+    document.getElementById('adminEditorPanel').style.display = 'none';
+  }
+  try {
+    await fetch(GAS_URL + '?action=delete&id=' + encodeURIComponent(id));
+  } catch(e) {}
+  renderAdminSidebar();
+  showToast('🗑 文章已刪除');
+}
+
+/* ── 自動產生 Slug ── */
+function adminAutoSlug() {
+  const slugField = document.getElementById('adminSlug');
+  if (slugField.value) return; // 已手動填寫則不覆蓋
+  const title = document.getElementById('adminTitle').value;
+  slugField.value = slugify(title);
+}
+function slugify(str) {
+  return String(str||'').toLowerCase()
+    .replace(/[\s\u4e00-\u9fff]+/g, '-')
+    .replace(/[^a-z0-9\-]/g, '')
+    .replace(/-+/g, '-').replace(/^-|-$/g, '')
+    .slice(0, 60);
+}
+
+/* ── Schema 面板 ── */
+function adminOpenSchemaPanel() {
+  const p = document.getElementById('adminSchemaPanel');
+  p.style.display = 'flex';
+  p.style.flexDirection = 'column';
+
+  // 如果 schema 欄位是空的，自動填入預設模板
+  const ta = document.getElementById('adminSchema');
+  if (!ta.value.trim()) {
+    const post = adminPosts.find(p => p.id === adminCurrentId) || {};
+    const title    = document.getElementById('adminTitle').value || post.title || '文章標題';
+    const slug     = post.slug || 'your-slug';
+    const date     = document.getElementById('adminDate').value || post.date || new Date().toISOString().slice(0,10);
+    const author   = document.getElementById('adminAuthor').value || post.author || '版主';
+    const category = document.getElementById('adminCategory').value || post.category || '';
+    const metaDesc = document.getElementById('adminMetaDesc').value || post.metaDesc || '文章摘要描述';
+    const ogImage  = document.getElementById('adminOgImage').value || post.ogImage || '';
+    ta.value = JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "NewsArticle",
+          "headline": title,
+          "datePublished": date,
+          "dateModified": date,
+          "author": { "@type": "Organization", "name": "崴富國際有限公司", "url": "https://wavecorp1.com" },
+          "publisher": {
+            "@type": "Organization",
+            "name": "崴富國際有限公司",
+            "url": "https://wavecorp1.com",
+            "logo": { "@type": "ImageObject", "url": "https://wavecorp1.com/logo.png", "width": 200, "height": 60 }
+          },
+          "url": "https://wavecorp1.com/news/" + slug + ".html",
+          "description": metaDesc,
+          "image": ogImage || "https://wavecorp1.com/logo.png",
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wavecorp1.com/news/" + slug + ".html" },
+          "keywords": category
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://wavecorp1.com" },
+            { "@type": "ListItem", "position": 2, "name": "最新消息", "item": "https://wavecorp1.com/#blog" },
+            { "@type": "ListItem", "position": 3, "name": title, "item": "https://wavecorp1.com/news/" + slug + ".html" }
+          ]
+        }
+      ]
+    }, null, 2);
+  }
+  document.getElementById('adminSchema').focus();
+}
+function adminCloseSchemaPanel() {
+  document.getElementById('adminSchemaPanel').style.display = 'none';
+}
+
+/* ── 編輯器模式切換 ── */
+function adminSetMode(mode) {
+  adminEditorMode = mode;
+  const ve = document.getElementById('visualEditor');
+  const he = document.getElementById('htmlEditor');
+  if (mode === 'visual') {
+    const raw = he.value;
+    ve.innerHTML = raw.replace(/<!--readmore-->/g,
+      '<div class="readmore-marker" contenteditable="false">── 閱讀更多（以下需點進文章才看得到）──</div>');
+    ve.style.display = 'block'; he.style.display = 'none';
+    document.getElementById('modeTabVisual').classList.add('active');
+    document.getElementById('modeTabHTML').classList.remove('active');
+  } else {
+    const converted = ve.innerHTML.replace(
+      /<div[^>]*class="[^"]*readmore-marker[^"]*"[^>]*>.*?<\/div>/g, '<!--readmore-->');
+    he.value = converted;
+    he.style.display = 'block'; ve.style.display = 'none';
+    document.getElementById('modeTabHTML').classList.add('active');
+    document.getElementById('modeTabVisual').classList.remove('active');
+  }
+  adminUpdatePreview();
+}
+
+/* ── execCommand ── */
+function adminExec(cmd, val) {
+  document.getElementById('visualEditor').focus();
+  document.execCommand(cmd, false, val||null);
+  adminUpdatePreview();
+}
+function adminExecLink() {
+  const url = prompt('請輸入連結 URL:');
+  if (url) adminExec('createLink', url);
+}
+function adminInsertImage() {
+  const url = prompt('請輸入圖片網址:');
+  if (!url) return;
+  const alt = prompt('請輸入圖片 ALT 文字（可留空）:') || '';
+  const visual = document.getElementById('visualEditor');
+  const html = document.getElementById('htmlEditor');
+  const img = `<img src="${url}" alt="${alt.replace(/"/g,'&quot;')}" style="max-width:100%;border-radius:10px;margin:20px 0;display:block;">`;
+  if (adminEditorMode === 'html') {
+    const pos = html.selectionStart;
+    html.value = html.value.slice(0, pos) + img + html.value.slice(pos);
+    html.dispatchEvent(new Event('input'));
+  } else {
+    visual.focus();
+    document.execCommand('insertHTML', false, img);
+    adminUpdatePreview();
+  }
+}
+
+/* ── 插入閱讀更多 ── */
+function adminInsertReadMore() {
+  if (adminEditorMode === 'html') {
+    const he = document.getElementById('htmlEditor');
+    const pos = he.selectionStart;
+    he.value = he.value.slice(0,pos) + '<!--readmore-->' + he.value.slice(pos);
+    adminUpdatePreview(); return;
+  }
+  const ve = document.getElementById('visualEditor');
+  ve.focus();
+  const marker = document.createElement('div');
+  marker.className = 'readmore-marker';
+  marker.contentEditable = 'false';
+  marker.textContent = '── 閱讀更多（以下需點進文章才看得到）──';
+  const sel = window.getSelection();
+  if (sel.rangeCount) {
+    const r = sel.getRangeAt(0); r.collapse(false);
+    r.insertNode(marker); r.setStartAfter(marker); r.collapse(true);
+    sel.removeAllRanges(); sel.addRange(r);
+  } else { ve.appendChild(marker); }
+  adminUpdatePreview();
+}
+
+/* ── 即時預覽 ── */
+function adminSyncFromHTML() { adminUpdatePreview(); }
+function adminUpdatePreview() {
+  let html = adminEditorMode === 'html'
+    ? document.getElementById('htmlEditor').value
+    : document.getElementById('visualEditor').innerHTML
+        .replace(/<div[^>]*class="[^"]*readmore-marker[^"]*"[^>]*>.*?<\/div>/g,
+          '<div class="preview-readmore-line">── 閱讀更多標籤 ──</div>');
+  html = html.replace(/<!--readmore-->/g, '<div class="preview-readmore-line">── 閱讀更多標籤 ──</div>');
+  document.getElementById('adminPreview').innerHTML = html;
+}
+
+/* ── Toast ── */
+function showToast(msg) {
+  const t = document.getElementById('admin-toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+/* ── Init ── */
+loadBlogPosts();
+
+/* ── 回到最上方 ── */
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+});
+</script>
+</body>
+</html>
