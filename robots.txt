@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /newsletter/
+Disallow: /revenue/
+Disallow: /order/
+Disallow: /wavecorp/
+Disallow: /shorten/
+Disallow: /rent/
+Disallow: /pos/
+Disallow: /booking/
+Disallow: /ses/
+Disallow: /cpshirt/
+# claude寶貝 封鎖 ecsupply 後台，不讓 Google 索引（測試頁已刪除）2026-06-19
+Disallow: /ecsupply/supplier-master.html
+Sitemap: https://wavecorp1.com/sitemap.xml

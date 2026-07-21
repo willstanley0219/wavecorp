@@ -1,0 +1,213 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "EC SUPPLY 採購管理工具",
+      "description": "你的供應商資料、商品資料，還存在 Excel 裡嗎？每次補貨都要翻分頁找連結—專為台灣電商代購賣家設計的採購管理系統，一次付費永久使用，無月費壓力。支援商品分類、Google 雲端同步、手機響應式介面，告別 Excel 混亂。",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "image": "https://www.seehouse.tw/supplier/main.png",
+	  "url": "https://www.seehouse.tw/supplier/",
+      "featureList": [
+        "採購管理工具",
+        "採購系統軟體",
+        "代購管理工具",
+        "手機操作介面",
+        "供應商管理"
+      ],
+      "brand": {
+        "@type": "Organization",
+        "name": "崴富國際有限公司"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "2"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "陳*廷"
+          },
+          "datePublished": "2026-03-20",
+          "reviewBody": "終於不用再開一堆 Excel 找連結了，在電腦上使用超方便，手機上也能看，但是需要有個自己的網路空間，需要一點時間設定也不賴。",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.8",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "林*美"
+          },
+          "datePublished": "2026-03-30",
+          "reviewBody": "以前團購找原本的供應商資料找半天，現在快多了，一次付費就能永久使用真的很划算，功能很簡單完全不用學，對我們團媽很實用。",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "2200",
+        "priceCurrency": "TWD",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.seehouse.tw/supplier/",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "2200",
+          "priceCurrency": "TWD"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "TW"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "d"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "d"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "購買後如何取得系統？",
+          "acceptedAnswer": { "@type": "Answer", "text": "付款完成後，請務必加入客服 LINE，提供您的姓名並說明已付款，客服會將完整系統檔案傳送給您。若客服暫時不在線上請耐心等候，不用擔心。請注意，晚上 10 點後或週六、週日較容易出現延誤，因為系統非自動化，需由客服人工協助安裝，造成不便敬請見諒。" }
+        },
+        {
+          "@type": "Question",
+          "name": "這個採購管理系統需要架設伺服器嗎？",
+          "acceptedAnswer": { "@type": "Answer", "text": "不需要。系統檔案放在 Dropbox、Google Drive 或本機電腦即可執行。雲端同步功能需使用您的 Google 帳號登入，一定要申請 Google 帳號才能使用唷，完全免費。" }
+        },
+        {
+          "@type": "Question",
+          "name": "Google 雲端同步如何設定？",
+          "acceptedAnswer": { "@type": "Answer", "text": "購買後附有完整圖文設定教學，依步驟操作約 10 分鐘即可完成。設定完成後，資料每次更動都會自動同步至您的系統，系統並提供手動備份，建議有更新比較多商品時，一定要備份到電腦。" }
+        },
+        {
+          "@type": "Question",
+          "name": "適合蝦皮、露天、MOMO 賣家使用嗎？",
+          "acceptedAnswer": { "@type": "Answer", "text": "是的。EC 供應商管理系統專為台灣電商賣家設計，無論您在蝦皮、露天、MOMO 或自架獨立站銷售，都可以用來統一管理供應商資料與採購價格記錄。" }
+        },
+        {
+          "@type": "Question",
+          "name": "下單付款後可以退貨嗎？",
+          "acceptedAnswer": { "@type": "Answer", "text": "系統檔案交付完成後，恕不接受退款。下單前請務必透過 LINE 客服諮詢，確認符合您的需求後再購買。" }
+        },
+        {
+          "@type": "Question",
+          "name": "到中國大陸也能使用嗎？",
+          "acceptedAnswer": { "@type": "Answer", "text": "可以，但中國大陸內地網路無法外連 Google，所以您的網路必須能連到海外，系統資料才會同步。例如攜帶筆電到中國批貨，若連上的酒店 Wi-Fi 不支援國際網路就無法同步，可能需要搭配手機漫遊網路卡才能正常使用雲端同步功能。" }
+        },
+        {
+          "@type": "Question",
+          "name": "代購商品太多，怎麼管理比較好？",
+          "acceptedAnswer": { "@type": "Answer", "text": "當商品與供應商數量變多時，使用 Excel 容易出現分類混亂、連結難找的問題。建議使用專門的採購管理工具，能快速分類、搜尋商品並集中管理供應商資料，大幅提升效率。" }
+        },
+        {
+          "@type": "Question",
+          "name": "為什麼 Excel 不適合管理團購商品？",
+          "acceptedAnswer": { "@type": "Answer", "text": "Excel 雖然方便，但當資料變多時會變得難以維護，容易出現重複、錯誤或找不到商品的情況。採購管理系統可以自動分類，還可以直接用關鍵字搜尋查找，讓管理更清楚。" }
+        },
+        {
+          "@type": "Question",
+          "name": "有推薦的代購管理工具嗎？",
+          "acceptedAnswer": { "@type": "Answer", "text": "EC SUPPLY 是專為台灣小型電商公司、代購、團購賣家設計的工具，支援供應商管理、商品分類與雲端同步，一次付費即可永久使用，非常適合中小型賣家。" }
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "EC SUPPLY 採購管理工具",
+      "description": "專為台灣電商代購賣家設計的採購管理系統，一次付費永久使用，無月費壓力。支援商品分類、Google 雲端同步、手機響應式介面，告別 Excel 混亂。",
+      "image": "https://www.seehouse.tw/supplier/main.png",
+      "url": "https://www.seehouse.tw/supplier/",
+      "brand": {
+        "@type": "Brand",
+        "name": "崴富國際有限公司"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": 2200,
+        "priceCurrency": "TWD",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.seehouse.tw/supplier/",
+        "seller": {
+          "@type": "Organization",
+          "name": "崴富國際有限公司"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": 0,
+            "currency": "TWD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "TW"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "d"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "d"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "TW",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "2",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+  ]
+}
+</script>
