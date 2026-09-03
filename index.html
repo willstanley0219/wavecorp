@@ -4,10 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- 2026-08-13 OAuth 品牌驗證：首頁名稱、用途與政策入口須與同意畫面一致。 -->
-<title>崴富國際｜EC Booking 店面預約系統・POS收銀・分店管理</title>
-<meta name="description" content="崴富國際提供 EC Booking 店面預約系統（NT$200/月起）、POS收銀、分店管理等雲端工具。EC Booking 協助店家建立線上預約、發送通知，店家可自行授權連結 Google Calendar 同步預約事件。">
+<title>崴富國際｜中小企業雲端管理系統</title>
+<meta name="description" content="從線上預約、商品管理到企業採購，崴富國際提供台灣店家真正用得上的雲端工具。">
 <meta name="keywords" content="台灣管理系統,中小企業,EC Booking 店面預約系統,店面預約系統,Google Calendar預約,EC SUPPLY採購工具,三聯式發票計算機,分店管理,租房管理,電子報系統,職業服飾,CPshirt,白襯衫,企業制服,桃園,崴富國際">
-<link rel="canonical" href="https://wavecorp1.com">
+<link rel="canonical" href="https://wavecorp1.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="崴富國際｜中小企業雲端管理系統">
+<meta property="og:description" content="從線上預約、商品管理到企業採購，崴富國際提供台灣店家真正用得上的雲端工具。">
+<meta property="og:url" content="https://wavecorp1.com/">
+<meta property="og:image" content="https://wavecorp1.com/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="崴富國際｜中小企業雲端管理系統">
+<meta name="twitter:description" content="從線上預約、商品管理到企業採購，崴富國際提供台灣店家真正用得上的雲端工具。">
+<meta name="twitter:image" content="https://wavecorp1.com/logo.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a1a2e'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23c9a96e' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -1528,6 +1538,15 @@ nav.scrolled {
   box-shadow: 0 0 60px rgba(0,0,0,0.08);
 }
 
+/* 2026-09-04 Superdesign 選定版：以更清楚的首屏與產品階層呈現已上線工具。 */
+.hero-title { font-size: clamp(42px, 4.4vw, 62px); line-height: 1.08; max-width: 580px; }
+.hero-desc { max-width: 510px; font-size: 16px; }
+.hero-right { padding-left: 56px; }
+.systems-preview { max-width: 500px; gap: 16px; }
+.systems-preview .sys-card:nth-child(n+6) { display: none; }
+.systems-preview .sys-card.featured { box-shadow: 0 18px 44px rgba(26,26,46,0.16); }
+.system-card.cpbooking-featured { grid-column: span 2; background: rgba(201,169,110,0.10); border-color: rgba(201,169,110,0.52); }
+
 /* Nav 固定在 wrapper 內，不超出 1360px */
 nav {
   max-width: 1360px;
@@ -1547,6 +1566,7 @@ nav {
   .section-about { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
   .section-systems { padding: 80px 24px; }
   .systems-grid { grid-template-columns: 1fr; }
+  .system-card.cpbooking-featured { grid-column: auto; }
   .section-brands { padding: 80px 24px; }
   .brands-grid { grid-template-columns: 1fr; }
   /* claude寶貝 手機隱藏about右側圖卡（圖1區）2026-07-08 */
@@ -1734,54 +1754,6 @@ nav {
         "@type": "Organization",
         "name": "崴富國際有限公司"
       }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "分店管理系統",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "description": "多據點庫存與人員同步管控，總部一個畫面掌握所有分店動態，支援跨店庫存即時同步、員工出勤與業績報表、權限分級管理。",
-      "featureList": [
-        "跨店庫存即時同步",
-        "員工出勤與業績報表",
-        "權限分級管理"
-      ],
-      "brand": {
-        "@type": "Organization",
-        "name": "崴富國際有限公司"
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "租房管理系統",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "description": "房東的智慧助手，自動追蹤租約到期、租金到帳，支援電子合約簽署，多房源集中管理，讓租務管理輕鬆自在。",
-      "featureList": [
-        "租約到期自動提醒",
-        "電子合約簽署",
-        "多房源集中管理"
-      ],
-      "brand": {
-        "@type": "Organization",
-        "name": "崴富國際有限公司"
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "電子報系統",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "description": "精準分眾發送電子報，自動化行銷流程，搭配 GA4 數據追蹤，支援會員分群自動發送與拖曳式版型編輯器。",
-      "featureList": [
-        "會員分群自動發送",
-        "GA4 開信率追蹤",
-        "拖曳式版型編輯器"
-      ],
-      "brand": {
-        "@type": "Organization",
-        "name": "崴富國際有限公司"
-      }
     }
   ]
 }
@@ -1813,16 +1785,15 @@ nav {
   <div class="hero-left">
     <div class="hero-eyebrow">崴富國際有限公司</div>
     <h1 class="hero-title">
-      企業管理
-      <em>更聰明</em>
-      的選擇
+      崴富國際｜中小企業
+      <em>雲端管理系統</em>
     </h1>
 <!-- 2026-08-13 OAuth 品牌驗證：在首頁前段清楚揭露 EC Booking 名稱與 Google Calendar 授權用途。 -->
     <p class="hero-desc">
-      專為台灣中小企業量身打造的雲端管理系統，包含 <strong>EC Booking 店面預約系統</strong>、商品管理系統、分店管理等工具。EC Booking 協助店家建立線上預約與發送通知；店家選擇連結 Google Calendar 時，系統只會同步該店家的預約事件。
+      從線上預約、商品管理到企業採購，崴富國際提供台灣店家真正用得上的雲端工具。
     </p>
     <div class="hero-actions">
-      <a href="#systems" class="btn-primary">探索系統</a>
+      <a href="#systems" class="btn-primary">查看系統方案</a>
       <a href="#contact" class="btn-ghost">聯絡客服 →</a>
     </div>
     <div class="hero-stats">
@@ -1849,13 +1820,12 @@ nav {
   </div>
   <div class="hero-right">
     <div class="systems-preview">
-      <!-- claude寶貝 Hero CPshirt卡直連cpshirt.net增強SEO 2026-06-19 -->
-      <!-- claude寶貝 Hero CPshirt卡加nofollow符合公司外連規則 2026-06-19 -->
-      <a href="https://www.cpshirt.net/" target="_blank" rel="noopener nofollow" class="sys-card featured" style="text-decoration:none;">
+      <!-- 2026-09-04 Superdesign 選定版：CP Booking 放在首頁最優先的 LIVE 工具位置。 -->
+      <a href="https://wavecorp1.com/cpbooking/" target="_blank" rel="noopener" class="sys-card featured" style="text-decoration:none;">
         <span class="sys-badge badge-live">LIVE</span>
-        <div class="sys-icon">🛍️</div>
-        <div class="sys-name">CPshirt 職業服飾</div>
-        <div class="sys-brief">桃園龜山職業服飾專賣，白襯衫、西裝外套、西裝褲，保全‧房仲‧餐飲首選。</div>
+        <div class="sys-icon">📆</div>
+        <div class="sys-name">CP Booking 線上預約系統</div>
+        <div class="sys-brief">按摩 SPA、美髮沙龍、美甲美睫、美容業與健身教練適用。30 天免費試用，月費 NT$250 起。</div>
       </a>
       <a href="https://wavecorp1.com/ecsupply/" target="_blank" class="sys-card" style="text-decoration:none;">
         <span class="sys-badge badge-live">LIVE</span>
@@ -1909,7 +1879,7 @@ nav {
   <div class="sys-header">
     <div class="about-label">/ 企業管理系統</div>
     <h2>為中小企業打造的<br><em>數位管理工具</em></h2>
-    <p>從門市到線上通路，從採購到租務，涵蓋您每日營運所需的每個環節。</p>
+    <p>從預約、採購到企業服務，讓每天的營運資訊更清楚、更容易管理。</p>
     <div class="gold-divider"></div>
   </div>
   <div class="systems-grid">
@@ -1991,7 +1961,7 @@ nav {
       </div>
     </article>
     <!-- 2026-09-04 CP Booking 已正式上線：系統服務增加正式入口。 -->
-    <a class="system-card" href="https://wavecorp1.com/cpbooking/" target="_blank" rel="noopener" style="text-decoration:none;display:block;color:inherit;">
+    <a class="system-card cpbooking-featured" href="https://wavecorp1.com/cpbooking/" target="_blank" rel="noopener" style="text-decoration:none;display:block;color:inherit;">
       <span class="sys-status status-live">LIVE</span>
       <div class="sys-num">06</div>
       <span class="sys-big-icon">📆</span>
@@ -2119,7 +2089,7 @@ nav {
   <div class="post-page-inner">
     <button class="post-back-btn" onclick="closePost()">← 返回首頁</button>
     <div class="post-meta" id="postMeta"></div>
-    <h1 class="post-title" id="postTitle"></h1>
+    <h2 class="post-title" id="postTitle"></h2>
     <div class="post-divider"></div>
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1191429468053714"
