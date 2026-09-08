@@ -167,8 +167,9 @@ function updateSitemap(slug, date) {
     }
   } catch(e) {}
 
-  const newEntry = `\n  <url>\n    <loc>https://wavecorp1.com/news/${slug}.html</loc>\n    <lastmod>${date || today()}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`;
-  const locTag = `<loc>https://wavecorp1.com/news/${slug}.html</loc>`;
+  // 對外網址是轉址後的乾淨網址（無 .html）；比照 sitemap.xml 與 commit 934bf97 的既定慣例。
+  const newEntry = `\n  <url>\n    <loc>https://wavecorp1.com/news/${slug}</loc>\n    <lastmod>${date || today()}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`;
+  const locTag = `<loc>https://wavecorp1.com/news/${slug}</loc>`;
 
   // 已存在則不重複新增
   if (currentXml.indexOf(locTag) !== -1) return;
@@ -197,8 +198,16 @@ function removeSitemapEntry(slug) {
     currentXml = Utilities.newBlob(Utilities.base64Decode(data.content.replace(/\n/g,''))).getDataAsString();
   } catch(e) { return; }
 
-  // 移除整個 <url>...</url> 區塊
-  const re = /\n?\s*<url>[\s\S]*?<loc>https:\/\/www\.wavecorp1\.com\/news\/${slug}\.html<\/loc>[\s\S]*?<\/url>/g;
+  // 移除整個 <url>...</url> 區塊。
+  // 舊版 bug：${slug} 寫在正則「字面量」裡不會被代入，且主機名寫死成 www.wavecorp1.com，
+  // 兩者都導致永遠比對不到 → 刪文章時 sitemap 條目一直留著。
+  // 修正：改用 RegExp 建構式帶入 slug，並容忍 www／非 www、結尾有無 .html 或斜線。
+  const safeSlug = String(slug).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(
+    '\\n?\\s*<url>(?:(?!<\\/url>)[\\s\\S])*?<loc>\\s*https?:\\/\\/(?:www\\.)?wavecorp1\\.com\\/news\\/' +
+    safeSlug + '(?:\\.html)?\\/?\\s*<\\/loc>[\\s\\S]*?<\\/url>',
+    'g'
+  );
   const updated = currentXml.replace(re, '');
   if (updated === currentXml) return; // 本來就沒有，不推
 
@@ -293,12 +302,12 @@ function generateHTML(post) {
           "height": 60
         }
       },
-      "url": "https://wavecorp1.com/news/${esc(slug)}.html",
+      "url": "https://wavecorp1.com/news/${esc(slug)}",
       "description": "${esc(metaDesc)}",
       "image": "${ogImage ? esc(ogImage) : 'https://wavecorp1.com/logo.png'}",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://wavecorp1.com/news/${esc(slug)}.html"
+        "@id": "https://wavecorp1.com/news/${esc(slug)}"
       },
       "keywords": "${esc(category)}"
     },
@@ -307,7 +316,7 @@ function generateHTML(post) {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://wavecorp1.com" },
         { "@type": "ListItem", "position": 2, "name": "最新消息", "item": "https://wavecorp1.com/#blog" },
-        { "@type": "ListItem", "position": 3, "name": "${esc(title)}", "item": "https://wavecorp1.com/news/${esc(slug)}.html" }
+        { "@type": "ListItem", "position": 3, "name": "${esc(title)}", "item": "https://wavecorp1.com/news/${esc(slug)}" }
       ]
     }
   ]
@@ -325,10 +334,10 @@ ${keywords ? `<meta name="keywords" content="${escHtml(keywords)}">` : ''}
 <meta property="og:title" content="${escHtml(metaTitle)}">
 <meta property="og:description" content="${escHtml(metaDesc)}">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://wavecorp1.com/news/${escHtml(slug)}.html">
+<meta property="og:url" content="https://wavecorp1.com/news/${escHtml(slug)}">
 ${ogImage ? `<meta property="og:image" content="${escHtml(ogImage)}">` : ''}
 ${schemaTag}
-<link rel="canonical" href="https://wavecorp1.com/news/${escHtml(slug)}.html">
+<link rel="canonical" href="https://wavecorp1.com/news/${escHtml(slug)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -419,7 +428,7 @@ fetch(SUPABASE_URL + '/rest/v1/posts?status=eq.published&order=created_at.desc&s
   if(!prev&&!next)return;
   const nav=document.getElementById('articleNav');
   nav.style.display='flex';
-  nav.innerHTML=(prev?'<a href="/news/'+prev.slug+'.html"><div class="nav-label">← 上一篇</div><div class="nav-title">'+prev.title+'</div></a>':'<div></div>')+(next?'<a href="/news/'+next.slug+'.html" class="next"><div class="nav-label">下一篇 →</div><div class="nav-title">'+next.title+'</div></a>':'<div></div>');
+  nav.innerHTML=(prev?'<a href="/news/'+prev.slug+'"><div class="nav-label">← 上一篇</div><div class="nav-title">'+prev.title+'</div></a>':'<div></div>')+(next?'<a href="/news/'+next.slug+'" class="next"><div class="nav-label">下一篇 →</div><div class="nav-title">'+next.title+'</div></a>':'<div></div>');
 }).catch(()=>{});
 </script>
 </body>
