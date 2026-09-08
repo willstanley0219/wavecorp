@@ -1,2 +1,5 @@
 # Claude Code 專案設定（機器本地，不 commit）
 .claude/
+
+# 含真實金鑰的貼上用版本（本機專用，永不進 git；貼進 Apps Script 用這份）
+blog.local.gs
