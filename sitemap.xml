@@ -38,7 +38,7 @@
 
   <url>
     <loc>https://wavecorp1.com/invoice/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,34 +50,6 @@
     <priority>0.8</priority>
   </url>
 
-
-  <url>
-    <loc>https://wavecorp1.com/news/tsmc-2026-q1-earnings</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://wavecorp1.com/news/cowos-advanced-packaging-taiwan-2026</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://wavecorp1.com/news/foplp-advanced-packaging-taiwan-2026</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://wavecorp1.com/news/samsung-texas-2nm-fab-2026</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
   <url>
     <loc>https://wavecorp1.com/news/non-iron-shirt-complete-guide-2026</loc>
