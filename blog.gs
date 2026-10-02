@@ -99,7 +99,7 @@ function deletePost(id) {
 // ── 發布文章 ──
 function publishPost(post) {
   post.status = 'published';
-  post.publishedAt = new Date().toISOString();
+  post.publishedAt = post.publishedAt || new Date().toISOString();
   const html = generateHTML(post);
   const github = pushToGitHub('news/' + post.slug + '.html', html);
   updateSitemap(post.slug, post.date);
@@ -301,7 +301,10 @@ function generateHTML(post) {
   const metaDesc  = post.metaDesc  || '';
   const ogImage   = post.ogImage   || '';
   const keywords  = post.keywords  || category;
-  const schema    = post.schema    || '';
+  const schema    = (post.schema || '').replace(
+    /(https:\/\/wavecorp1\.com\/news\/[^"]+)\.html(?=")/g,
+    '$1'
+  );
   const raw       = content.replace(/<!--readmore-->/g, '');
   const { toc, body } = buildTOC(raw);
   const fullHTML  = toc + body;

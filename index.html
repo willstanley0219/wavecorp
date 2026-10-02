@@ -2270,12 +2270,12 @@ nav {
           "height": 60
         }
       },
-      "url": "https://wavecorp1.com/news/your-slug.html",
+      "url": "https://wavecorp1.com/news/your-slug",
       "description": "文章摘要描述",
       "image": "https://wavecorp1.com/images/cover.jpg",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://wavecorp1.com/news/your-slug.html"
+        "@id": "https://wavecorp1.com/news/your-slug"
       },
       "keywords": "關鍵字1, 關鍵字2"
     },
@@ -2284,7 +2284,7 @@ nav {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://wavecorp1.com" },
         { "@type": "ListItem", "position": 2, "name": "最新消息", "item": "https://wavecorp1.com/#blog" },
-        { "@type": "ListItem", "position": 3, "name": "文章標題", "item": "https://wavecorp1.com/news/your-slug.html" }
+        { "@type": "ListItem", "position": 3, "name": "文章標題", "item": "https://wavecorp1.com/news/your-slug" }
       ]
     }
   ]
@@ -2417,7 +2417,7 @@ function renderBlogGrid(posts) {
       ? (p.content || '').split(MARKER)[0]
       : stripTags((p.content || '').slice(0, 200)) + '…';
     return `
-    <a class="blog-card" href="#" data-slug="${esc(p.slug)}" onclick="if(this.dataset.slug){window.open('/news/'+encodeURIComponent(this.dataset.slug)+'.html','_blank');}return false;" rel="nofollow">
+    <a class="blog-card" href="/news/${encodeURIComponent(p.slug)}">
       <div class="blog-card-img-placeholder">📰</div>
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -2535,7 +2535,7 @@ function renderAdminTable() {
       <td>
         <div class="admin-table-actions">
           <button onclick="adminLoadPost('${p.id}')" style="padding:4px 10px;font-size:11px;background:#1a1a2e;color:#c9a96e;border:none;border-radius:4px;cursor:pointer;">編輯</button>
-          ${p.status==='published' && p.slug ? `<a href="/news/${p.slug}.html" target="_blank" style="padding:4px 10px;font-size:11px;background:rgba(201,169,110,0.1);color:#c9a96e;border:1px solid rgba(201,169,110,0.3);border-radius:4px;text-decoration:none;">查看</a>` : ''}
+          ${p.status==='published' && p.slug ? `<a href="/news/${encodeURIComponent(p.slug)}" target="_blank" style="padding:4px 10px;font-size:11px;background:rgba(201,169,110,0.1);color:#c9a96e;border:1px solid rgba(201,169,110,0.3);border-radius:4px;text-decoration:none;">查看</a>` : ''}
           <button onclick="adminDeletePost('${p.id}')" style="padding:4px 8px;font-size:11px;background:rgba(230,57,70,0.1);color:#e63946;border:1px solid rgba(230,57,70,0.2);border-radius:4px;cursor:pointer;">刪除</button>
         </div>
       </td>
@@ -2712,7 +2712,7 @@ async function adminPublish() {
   const post = adminGetCurrentPost();
   if (!post) return;
   if (!post.slug) { showToast('❌ 請填寫 URL Slug'); return; }
-  if (!confirm(`確定發布「${post.title}」？\n\n發布後網址：\nwavecorp1.com/news/${post.slug}.html`)) return;
+  if (!confirm(`確定發布「${post.title}」？\n\n發布後網址：\nwavecorp1.com/news/${post.slug}`)) return;
   post.status = 'published';
   const idx = adminPosts.findIndex(x => x.id===post.id);
   if (idx>=0) adminPosts[idx] = post; else adminPosts.unshift(post);
@@ -2724,7 +2724,7 @@ async function adminPublish() {
       body: JSON.stringify({ action: 'publish', post })
     });
     const data = await res.json();
-    if (data.ok) showToast('🚀 已發布！wavecorp1.com/news/' + post.slug + '.html');
+    if (data.ok) showToast('🚀 已發布！wavecorp1.com/news/' + post.slug);
     else showToast('⚠️ ' + (data.error || '發布失敗'));
   } catch(e) {
     showToast('⚠️ 發布失敗，請重試');
@@ -2796,10 +2796,10 @@ function adminOpenSchemaPanel() {
             "url": "https://wavecorp1.com",
             "logo": { "@type": "ImageObject", "url": "https://wavecorp1.com/logo.png", "width": 200, "height": 60 }
           },
-          "url": "https://wavecorp1.com/news/" + slug + ".html",
+          "url": "https://wavecorp1.com/news/" + slug,
           "description": metaDesc,
           "image": ogImage || "https://wavecorp1.com/logo.png",
-          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wavecorp1.com/news/" + slug + ".html" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wavecorp1.com/news/" + slug },
           "keywords": category
         },
         {
@@ -2807,7 +2807,7 @@ function adminOpenSchemaPanel() {
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://wavecorp1.com" },
             { "@type": "ListItem", "position": 2, "name": "最新消息", "item": "https://wavecorp1.com/#blog" },
-            { "@type": "ListItem", "position": 3, "name": title, "item": "https://wavecorp1.com/news/" + slug + ".html" }
+            { "@type": "ListItem", "position": 3, "name": title, "item": "https://wavecorp1.com/news/" + slug }
           ]
         }
       ]
