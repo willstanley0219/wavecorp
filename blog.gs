@@ -63,7 +63,7 @@ function loadPosts() {
 
 // ── 儲存文章（upsert）──
 function savePost(post) {
-  UrlFetchApp.fetch(
+  const resp = UrlFetchApp.fetch(
     SUPABASE_URL + '/rest/v1/posts',
     {
       method: 'POST',
@@ -72,6 +72,9 @@ function savePost(post) {
       muteHttpExceptions: true
     }
   );
+  if (resp.getResponseCode() < 200 || resp.getResponseCode() >= 300) {
+    throw new Error('Supabase 儲存失敗 (' + resp.getResponseCode() + '): ' + responseMessage(resp));
+  }
   return { ok: true, id: post.id };
 }
 
@@ -97,11 +100,11 @@ function deletePost(id) {
 function publishPost(post) {
   post.status = 'published';
   post.publishedAt = new Date().toISOString();
-  savePost(post);
   const html = generateHTML(post);
-  const result = pushToGitHub('news/' + post.slug + '.html', html);
+  const github = pushToGitHub('news/' + post.slug + '.html', html);
   updateSitemap(post.slug, post.date);
-  return { ok: true, slug: post.slug, github: result };
+  savePost(post);
+  return { ok: true, slug: post.slug, github };
 }
 
 // ── GitHub 推送 ──
@@ -116,7 +119,13 @@ function pushToGitHub(path, content) {
       muteHttpExceptions: true
     });
     if (check.getResponseCode() === 200) sha = JSON.parse(check.getContentText()).sha;
-  } catch(e) {}
+    else if (check.getResponseCode() !== 404) {
+      throw new Error('GitHub 讀取文章失敗 (' + check.getResponseCode() + '): ' + responseMessage(check));
+    }
+  } catch(e) {
+    if (e.message.indexOf('GitHub 讀取文章失敗') === 0) throw e;
+    throw new Error('GitHub 讀取文章失敗: ' + e.message);
+  }
 
   const payload = { message: 'publish: ' + path, content: encoded, branch: 'main' };
   if (sha) payload.sha = sha;
@@ -127,7 +136,21 @@ function pushToGitHub(path, content) {
     payload: JSON.stringify(payload),
     muteHttpExceptions: true
   });
-  return { code: resp.getResponseCode() };
+  const code = resp.getResponseCode();
+  if (code !== 200 && code !== 201) {
+    throw new Error('GitHub 上傳文章失敗 (' + code + '): ' + responseMessage(resp));
+  }
+  return { code };
+}
+
+function responseMessage(resp) {
+  const text = resp.getContentText() || '';
+  try {
+    const data = JSON.parse(text);
+    return String(data.message || text).slice(0, 240);
+  } catch(e) {
+    return text.slice(0, 240) || '未知錯誤';
+  }
 }
 
 // ── GitHub 刪除 ──
@@ -164,15 +187,20 @@ function updateSitemap(slug, date) {
       const data = JSON.parse(check.getContentText());
       sha = data.sha;
       currentXml = Utilities.newBlob(Utilities.base64Decode(data.content.replace(/\n/g,''))).getDataAsString();
+    } else if (check.getResponseCode() !== 404) {
+      throw new Error('GitHub 讀取 sitemap 失敗 (' + check.getResponseCode() + '): ' + responseMessage(check));
     }
-  } catch(e) {}
+  } catch(e) {
+    if (e.message.indexOf('GitHub 讀取 sitemap 失敗') === 0) throw e;
+    throw new Error('GitHub 讀取 sitemap 失敗: ' + e.message);
+  }
 
   // 對外網址是轉址後的乾淨網址（無 .html）；比照 sitemap.xml 與 commit 934bf97 的既定慣例。
   const newEntry = `\n  <url>\n    <loc>https://wavecorp1.com/news/${slug}</loc>\n    <lastmod>${date || today()}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`;
   const locTag = `<loc>https://wavecorp1.com/news/${slug}</loc>`;
 
   // 已存在則不重複新增
-  if (currentXml.indexOf(locTag) !== -1) return;
+  if (currentXml.indexOf(locTag) !== -1) return { ok: true, unchanged: true };
 
   const updated = currentXml
     ? currentXml.replace('</urlset>', newEntry + '\n\n</urlset>')
@@ -180,7 +208,12 @@ function updateSitemap(slug, date) {
 
   const payload = { message: 'sitemap: add ' + slug, content: Utilities.base64Encode(updated, Utilities.Charset.UTF_8), branch: 'main' };
   if (sha) payload.sha = sha;
-  UrlFetchApp.fetch(url, { method: 'PUT', headers: ghHeaders, payload: JSON.stringify(payload), muteHttpExceptions: true });
+  const resp = UrlFetchApp.fetch(url, { method: 'PUT', headers: ghHeaders, payload: JSON.stringify(payload), muteHttpExceptions: true });
+  const code = resp.getResponseCode();
+  if (code !== 200 && code !== 201) {
+    throw new Error('GitHub 更新 sitemap 失敗 (' + code + '): ' + responseMessage(resp));
+  }
+  return { ok: true, code };
 }
 
 // ── 更新 Sitemap（刪除文章）──
@@ -437,4 +470,3 @@ fetch(SUPABASE_URL + '/rest/v1/posts?status=eq.published&order=created_at.desc&s
 
 function esc(s){ return String(s||'').replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\n/g,'\\n'); }
 function escHtml(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-
