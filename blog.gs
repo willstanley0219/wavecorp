@@ -364,6 +364,7 @@ function generateHTML(post) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://wavecorp1.com/favicon.png" sizes="96x96" type="image/png">
 <title>${escHtml(metaTitle)} | WaveEC</title>
 <meta name="description" content="${escHtml(metaDesc)}">
 ${keywords ? `<meta name="keywords" content="${escHtml(keywords)}">` : ''}
