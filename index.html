@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+  崴富國際有限公司 版權所有
+  最後修改：2026-11-26
+  修改內容：首屏說明新增購物車系統一句，移除數字列
+-->
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -225,28 +230,6 @@ nav {
   transition: color 0.2s;
 }
 .btn-ghost:hover { color: var(--white); }
-.hero-stats {
-  display: flex;
-  gap: 32px;
-  margin-top: 56px;
-  padding-top: 40px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  opacity: 0;
-  animation: fadeUp 0.8s 1.0s forwards;
-}
-.stat-item .stat-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--gold);
-}
-.stat-item .stat-label {
-  font-size: 11px;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 1px;
-  margin-top: 2px;
-}
-
 .hero-right {
   background: var(--paper);
   display: flex;
@@ -806,7 +789,7 @@ footer {
 
 /* claude寶貝 B2B CTA卡片樣式 2026-07-08 */
 .hero-b2b-card {
-  margin-top: 28px;
+  margin-top: 40px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(201,169,110,0.25);
   border-radius: 14px;
@@ -1788,26 +1771,14 @@ nav {
       <em>雲端管理系統</em>
     </h1>
 <!--  OAuth 品牌驗證：在首頁前段清楚揭露 EC Booking 名稱與 Google Calendar 授權用途。 -->
+    <!-- 2026/11/26 09:03 首屏說明新增購物車系統一句，移除下方數字列 -->
     <p class="hero-desc">
+      購物車系統(崴富智能化購物車系統,比各大品牌功能,強大很多,不抽成,<span style="white-space:nowrap">價格划算)</span><br>
       店面線上預約、健身房預約系統,美業預約系統,商品管理系統，提供台灣店家雲端實用工具。
     </p>
     <div class="hero-actions">
       <a href="#systems" class="btn-primary">查看系統方案</a>
       <a href="#contact" class="btn-ghost">聯絡客服 →</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">6+</div>
-        <div class="stat-label">管理系統</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">TWD</div>
-        <div class="stat-label">台灣在地服務</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">24/7</div>
-        <div class="stat-label">LINE 客服</div>
-      </div>
     </div>
 <!-- claude寶貝 B2B客製化購物車CTA卡片 2026-07-08 -->
     <div class="hero-b2b-card">
