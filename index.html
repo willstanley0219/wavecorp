@@ -2,7 +2,7 @@
 <!--
   崴富國際有限公司 版權所有
   最後修改：2026-11-26
-  修改內容：首屏說明新增購物車系統一句，移除數字列；左上角換新 logo
+  修改內容：首屏說明新增購物車系統一句，移除數字列；左上角換新 logo；刪除旗下品牌區塊
 -->
 <html lang="zh-TW">
 <head>
@@ -562,79 +562,6 @@ nav {
 }
 .status-live { background: rgba(39,174,96,0.15); color: #27ae60; border: 1px solid rgba(39,174,96,0.3); }
 .status-soon { background: rgba(201,169,110,0.1); color: var(--gold); border: 1px solid rgba(201,169,110,0.3); }
-
-/* ─── BRANDS ─── */
-.section-brands {
-  padding: 100px 80px;
-  background: var(--paper);
-}
-.brands-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-.brands-header .about-label { text-align: center; }
-.brands-header h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  font-weight: 700;
-  color: var(--navy);
-}
-.brands-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.brand-card {
-  background: var(--white);
-  border-radius: 16px;
-  padding: 36px;
-  border: 1px solid var(--mist);
-  transition: all 0.3s;
-  text-decoration: none;
-  display: block;
-}
-.brand-card:hover {
-  border-color: var(--gold-light);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.07);
-}
-.brand-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  font-weight: 900;
-  color: var(--navy);
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-.brand-logo span { color: var(--gold); }
-.brand-domain {
-  font-family: 'Space Mono', monospace;
-  font-size: 11px;
-  color: var(--gold);
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-}
-.brand-desc {
-  font-size: 13px;
-  color: var(--steel);
-  line-height: 1.7;
-}
-.brand-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-.btag {
-  font-size: 10px;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: var(--paper);
-  color: var(--steel);
-  letter-spacing: 0.5px;
-}
 
 /* ─── CONTACT ─── */
 .section-contact {
@@ -1537,8 +1464,6 @@ nav {
   .section-systems { padding: 80px 24px; }
   .systems-grid { grid-template-columns: 1fr; }
   .system-card.cpbooking-featured { grid-column: auto; }
-  .section-brands { padding: 80px 24px; }
-  .brands-grid { grid-template-columns: 1fr; }
   /* claude寶貝 手機隱藏about右側圖卡（圖1區）2026-07-08 */
   .about-visual { display: none; }
   .section-about { grid-template-columns: 1fr; }
@@ -1739,7 +1664,6 @@ nav {
   </div>
   <ul class="nav-links">
     <li><a href="#systems">系統服務</a></li>
-    <li><a href="#brands">品牌旗下</a></li>
     <li><a href="#about">關於我們</a></li>
     <li><a href="#contact">聯絡我們</a></li>
 
@@ -1984,49 +1908,6 @@ nav {
   </div>
   <div id="blogMoreWrap" style="text-align:center;margin-top:48px;display:none;">
     <a href="/news/" class="blog-more-btn">更多文章 →</a>
-  </div>
-</section>
-
-<!-- BRANDS -->
-<section class="section-brands" id="brands">
-  <div class="brands-header">
-    <div class="about-label">/ 旗下品牌</div>
-    <h2>崴富國際品牌</h2>
-    <div class="gold-divider"></div>
-  </div>
-  <div class="brands-grid">
-    <a href="https://www.cpshirt.net" target="_blank" class="brand-card">
-      <h3 class="brand-logo">CP<span>shirt</span></h3>
-      <div class="brand-domain">cpshirt.net</div>
-      <div class="brand-desc">台灣桃園龜山職業服飾專賣店，白色禮服襯衫、西裝外套、西裝褲，保全‧房仲‧餐廳制服採購首選，鄰近機場捷運 A7 站。</div>
-      <div class="brand-tags">
-        <span class="btag">職業服飾</span>
-        <span class="btag">企業制服</span>
-        <span class="btag">實體門市</span>
-        
-      </div>
-    </a>
- 
-    <a href="https://www.seehouse.tw" target="_blank" class="brand-card">
-      <h3 class="brand-logo">see<span>house</span></h3>
-      <div class="brand-domain">seehouse.tw</div>
-      <div class="brand-desc">線上看房平台與商品目錄，提供租房資訊查詢及 EC SUPPLY 採購管理工具，電商賣家採購效率升級。</div>
-      <div class="brand-tags">
-        <span class="btag">線上看房</span>
-        <span class="btag">採購工具</span>
-        <span class="btag">電商系統</span>
-      </div>
-    </a>
-    <div class="brand-card" style="border-style: dashed; cursor: default;">
-      <h3 class="brand-logo" style="color:#ccc;">MORE <span style="color:var(--gold-light);">+</span></h3>
-      <div class="brand-domain" style="color:#bbb;">即將推出</div>
-      <div class="brand-desc" style="color:#bbb;">更多旗下品牌與服務正在籌備中，敬請期待崴富國際的最新動態。</div>
-      <div class="brand-tags">
-        <span class="btag" style="opacity:0.5;">租房管理</span>
-        <span class="btag" style="opacity:0.5;">分店系統</span>
-        <span class="btag" style="opacity:0.5;">更多…</span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -2318,7 +2199,7 @@ const revealObserver = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.1 });
-document.querySelectorAll('.system-card, .brand-card, .about-card-main').forEach(el => {
+document.querySelectorAll('.system-card, .about-card-main').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
