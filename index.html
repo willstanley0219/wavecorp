@@ -2,7 +2,7 @@
 <!--
   崴富國際有限公司 版權所有
   最後修改：2026-11-26
-  修改內容：首屏說明新增購物車系統一句，移除數字列
+  修改內容：首屏說明新增購物車系統一句，移除數字列；左上角換新 logo
 -->
 <html lang="zh-TW">
 <head>
@@ -80,24 +80,11 @@ nav {
 }
 .nav-logo {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
+  align-items: center;
 }
-.nav-logo-wave {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: 22px;
-  color: var(--navy);
-  letter-spacing: 2px;
-}
-.nav-logo-wave span { color: var(--gold); }
-.nav-logo-sub {
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  color: var(--steel);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  opacity: 0.7;
+.nav-logo img {
+  display: block;
+  border-radius: 6px;
 }
 .nav-links {
   display: flex;
@@ -1746,11 +1733,9 @@ nav {
 
 <!-- NAV -->
 <nav id="mainNav">
+  <!-- 2026/11/26 09:06 左上角換新 logo -->
   <div class="nav-logo">
-    <div>
-      <div class="nav-logo-wave">WA<span>V</span>E</div>
-      <div class="nav-logo-sub">ECOMMERCE</div>
-    </div>
+    <img src="/logo-wave.webp" alt="Wave Ecommerce Corporation 崴富國際" width="72" height="60">
   </div>
   <ul class="nav-links">
     <li><a href="#systems">系統服務</a></li>
