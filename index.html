@@ -82,9 +82,45 @@ nav {
   display: flex;
   align-items: center;
 }
-.nav-logo img {
+/* 2026/11/26 10:14 頁首品牌鎖定：原圖徽章＋文字 */
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+}
+.brand-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: none;
+  background: var(--navy);
+  box-shadow: 0 2px 8px rgba(26,26,46,.18);
+}
+.brand-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  border-radius: 6px;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.18;
+}
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 19px;
+  color: var(--navy);
+  letter-spacing: .5px;
+}
+.brand-sub {
+  font-size: 10px;
+  color: var(--steel);
+  letter-spacing: 2.5px;
+  margin-top: 2px;
 }
 .nav-links {
   display: flex;
@@ -1457,6 +1493,10 @@ nav {
 @media (max-width: 900px) {
   nav { padding: 0 20px; max-width: 100%; left: 0; transform: none; }
   .nav-links { display: none; }
+  /* 2026/11/26 10:14 手機版品牌鎖定：縮徽章、藏中文小字 */
+  .brand-badge { width: 38px; height: 38px; }
+  .brand-name { font-size: 17px; }
+  .brand-sub { display: none; }
   .hero { grid-template-columns: 1fr; }
   .hero-left { padding: 100px 24px 60px; }
   .hero-right { padding: 40px 24px 60px; display: none; }
@@ -1658,9 +1698,15 @@ nav {
 
 <!-- NAV -->
 <nav id="mainNav">
-  <!-- 2026/11/26 09:06 左上角換新 logo -->
+  <!-- 2026/11/26 10:14 頁首 logo 改藏青徽章＋文字鎖定（原圖 wavecorp） -->
   <div class="nav-logo">
-    <img src="/logo-wave.webp" alt="Wave Ecommerce Corporation 崴富國際" width="72" height="60">
+    <a class="brand-lockup" href="/" aria-label="Wave 崴富國際 首頁">
+      <span class="brand-badge"><img src="/logo-badge.webp" alt="Wave 崴富國際標誌" width="44" height="44"></span>
+      <span class="brand-text">
+        <span class="brand-name">Wave</span>
+        <span class="brand-sub">崴富國際有限公司</span>
+      </span>
+    </a>
   </div>
   <ul class="nav-links">
     <li><a href="#systems">系統服務</a></li>
